@@ -4,13 +4,16 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from "react-redux";
 import { ConnectedRouter } from "react-router-redux";
 import store, { history } from './aerial-site/core/createStore';
-
+import { ThemeProvider } from 'react-jss';
+import theme from './theme';
 import App from './aerial-site/App';
 
 const Root = () => (
     <Provider store={store}>
         <ConnectedRouter history={history}>
-            <App />
+            <ThemeProvider theme={theme}>
+                <App />
+            </ThemeProvider>
         </ConnectedRouter>
     </Provider>
 );
