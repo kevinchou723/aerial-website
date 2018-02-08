@@ -34,7 +34,7 @@ const styleSheet = theme => ({
     },
     description:{
         fontWeight: 300,
-        fontSize: '2.25em',
+        fontSize: '1.8em',
         lineHeight: '1.6em'
     },
     bottomRight:{
@@ -71,11 +71,11 @@ const styleSheet = theme => ({
         }
     },
     site:{
-        fontSize: '1.25em',
+        fontSize: '1em',
         fontWeight: '700'
     },
     by:{
-        fontSize: '1.25em',
+        fontSize: '1em',
         fontWeight: 300,
         marginTop: '0.25em'
     }

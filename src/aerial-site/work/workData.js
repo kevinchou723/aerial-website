@@ -7,11 +7,11 @@ export default {
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-1.jpg' },
-            { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-2.jpg' },
-            { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-3.jpg' },
-            { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-4.jpg' },
-            { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-5.jpg' }
+            { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-1.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-2.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-3.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-4.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-5.jpg', rows: 2, cols: 4 }
         ]
     },
     'fab-selectedkits': {
@@ -22,12 +22,12 @@ export default {
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-1.jpg' },
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-2.jpg' },
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-3.jpg' },
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-4.jpg' },
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-5.jpg' },
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-6.jpg' }
+            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-1.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-2.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-3.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-4.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-5.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-6.jpg', rows: 2, cols: 4 }
         ]
     },
     'fab-hellofab': {
@@ -38,11 +38,18 @@ export default {
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-1.jpg' },
-            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-2.gif' },
-            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-3.jpg' },
-            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-4.jpg' },
-            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-5.jpg' }
+            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-1.jpg', rows: 2.3, cols: 4 },
+            { 
+                hasSubGrid: true,
+                innerImgs: [
+                    { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-2.gif', rows: 2, cols: 2, height: '50%', padding: '0 0 10px 0' },
+                    { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-4.jpg', rows: 2, cols: 2, height: '50%', padding: '10px 0 0 0' }
+                ],
+                rows: 4,
+                cols: 2
+            },
+            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-3.jpg', rows: 4, cols: 2  },
+            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-5.jpg', rows: 2.3, cols: 4  }
         ]
     },
     'fab-printad': {
@@ -53,23 +60,23 @@ export default {
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/fab-printad/fab-printad-1.jpg' }
+            { src: '/assets/img/work/fab-printad/fab-printad-1.jpg', rows: 4, cols: 4 }
         ]
     },
     'fab-webredesign': {
-        title: 'First Aid Beauty - Website Re-Design',
+        title: 'First Aid Beauty - Website Redesign',
         description: 'The concept behind First Aid Beauty’s new website is to emphasize the brand’s mission and values such as being approachable, direct, witty and fun. This is translated through the use of playful yet informative photography, tone of voice and graphical elements.',
         client: 'First Aid Beauty',
         digitalAgency: 'Sweden Unlimited',
-        designAgency: 'Adler Design *',
+        designAgency: 'Adler Design*',
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
         subNote: '* Adler Design provided creative direction and brand assets to support the redesign.',
         images: [
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-1.jpg' },
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-2.jpg' },
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-3.jpg' },
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-4.jpg' }
+            { src: '/assets/img/work/fab-webredesign/fab-webredesign-1.jpg', rows: 2.3, cols: 4  },
+            { src: '/assets/img/work/fab-webredesign/fab-webredesign-2.jpg', rows: 2, cols: 2  },
+            { src: '/assets/img/work/fab-webredesign/fab-webredesign-3.jpg', rows: 2, cols: 2  },
+            { src: '/assets/img/work/fab-webredesign/fab-webredesign-4.jpg', rows: 2.3, cols: 4  }
         ]
     },
     'fab-collection': {
@@ -80,37 +87,70 @@ export default {
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/fab-collection/fab-collection-1.jpg' },
-            { src: '/assets/img/work/fab-collection/fab-collection-2.jpg' },
-            { src: '/assets/img/work/fab-collection/fab-collection-3.jpg' },
-            { src: '/assets/img/work/fab-collection/fab-collection-4.jpg' },
-            { src: '/assets/img/work/fab-collection/fab-collection-5.jpg' },
-            { src: '/assets/img/work/fab-collection/fab-collection-6.jpg' },
-            { src: '/assets/img/work/fab-collection/fab-collection-7.jpg' }
+            { src: '/assets/img/work/fab-collection/fab-collection-1.jpg', rows: 2.3, cols: 4  },
+            { src: '/assets/img/work/fab-collection/fab-collection-2.jpg', rows: 3, cols: 2.5  },
+            {
+                hasSubGrid: true,
+                innerImgs: [
+                    { src: '/assets/img/work/fab-collection/fab-collection-3.jpg', rows: 1, cols: 1, height: '50%', padding: '0 0 10px 0' },
+                    { src: '/assets/img/work/fab-collection/fab-collection-4.jpg', rows: 1, cols: 1, height: '50%', padding: '10px 0 0 0' }
+                ],
+                rows: 3,
+                cols: 1.5
+            },
+            {
+                hasSubGrid: true,
+                innerImgs: [
+                    { src: '/assets/img/work/fab-collection/fab-collection-5.jpg', rows: 1, cols: 1, height: '50%', padding: '0 0 10px 0' },
+                    { src: '/assets/img/work/fab-collection/fab-collection-7.jpg', rows: 1, cols: 1, height: '50%', padding: '10px 0 0 0' }
+                ],
+                rows: 3,
+                cols: 1.5
+            },
+            { src: '/assets/img/work/fab-collection/fab-collection-6.jpg', rows: 3, cols: 2.5 },
         ]
     },
     'ppf': {
         title: 'Prelude & Pink Flamingo',
-        description: 'Prelude is a Neo French Bistro serving locally sourced ingredients.Each dish is developed to best highlight the quality, avor and texture of the ingredient.Pink Flamingo is an 80’s themed concept bar by Prelude.It also uses local produces to create quality drinks inspired by the era.',
+        description: 'Prelude is a Neo French Bistro serving locally sourced ingredients. Each dish is developed to best highlight the quality, flavor and texture of the ingredient. Pink Flamingo is an 80’s themed concept bar by Prelude. It also uses local produces to create quality drinks inspired by the era.',
         client: 'Prelude & Pink Flamingo',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/ppf/preludepinkflamingo-1.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-2.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-3.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-4.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-5.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-6.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-7.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-8.gif' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-9.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-10.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-11.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-12.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-13.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-14.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-15.jpg' },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-16.jpg' }
+            { src: '/assets/img/work/ppf/preludepinkflamingo-1.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-2.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-3.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-4.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-5.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-6.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-7.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-8.gif', rows: 2, cols: 2 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-9.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-10.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-11.jpg', rows: 4, cols: 2 },
+            {
+                hasSubGrid: true,
+                innerImgs: [
+                    { src: '/assets/img/work/ppf/preludepinkflamingo-12.jpg', rows: 2, cols: 2, height: '50%', padding: '0 0 10px 0' },
+                    {
+                        hasSubGrid: true,
+                        innerImgs: [
+                            { src: '/assets/img/work/ppf/preludepinkflamingo-13.jpg', rows: 1, cols: 1, height: '50%' },
+                            { src: '/assets/img/work/ppf/preludepinkflamingo-14.jpg', rows: 1, cols: 1, height: '50%' },
+                            { src: '/assets/img/work/ppf/preludepinkflamingo-15.jpg', rows: 1, cols: 1, height: '50%' },
+                            { src: '/assets/img/work/ppf/preludepinkflamingo-16.jpg', rows: 1, cols: 1, height: '50%' }
+                        ],
+                        rows: 2,
+                        cols: 2
+                    }
+                ],
+                rows: 4,
+                cols: 2
+            },
+            // { src: '/assets/img/work/ppf/preludepinkflamingo-12.jpg', rows: 2, cols: 2 },
+            // { src: '/assets/img/work/ppf/preludepinkflamingo-13.jpg', rows: 1, cols: 1 },
+            // { src: '/assets/img/work/ppf/preludepinkflamingo-14.jpg', rows: 1, cols: 1 },
+            // { src: '/assets/img/work/ppf/preludepinkflamingo-15.jpg', rows: 1, cols: 1 },
+            // { src: '/assets/img/work/ppf/preludepinkflamingo-16.jpg', rows: 1, cols: 1 }
         ]
     },
     'nomz': {
@@ -119,11 +159,11 @@ export default {
         client: 'NOMZ',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/nomz/nomz-1.jpg' },
-            { src: '/assets/img/work/nomz/nomz-2.jpg' },
-            { src: '/assets/img/work/nomz/nomz-3.jpg' },
-            { src: '/assets/img/work/nomz/nomz-4.jpg' },
-            { src: '/assets/img/work/nomz/nomz-5.jpg' }
+            { src: '/assets/img/work/nomz/nomz-1.jpg', rows: 2.3, cols: 4  },
+            { src: '/assets/img/work/nomz/nomz-2.jpg', rows: 2.3, cols: 4  },
+            { src: '/assets/img/work/nomz/nomz-3.jpg', rows: 2.3, cols: 4  },
+            { src: '/assets/img/work/nomz/nomz-4.jpg', rows: 2.3, cols: 4  },
+            { src: '/assets/img/work/nomz/nomz-5.jpg', rows: 2.3, cols: 4  }
         ]
     },
     'gms': {
@@ -132,13 +172,28 @@ export default {
         client: 'Greenwich Music Studio',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/gms/greenwichmusicstudio-1.jpg' },
-            { src: '/assets/img/work/gms/greenwichmusicstudio-2.jpg' },
-            { src: '/assets/img/work/gms/greenwichmusicstudio-3.jpg' },
-            { src: '/assets/img/work/gms/greenwichmusicstudio-4.jpg' },
-            { src: '/assets/img/work/gms/greenwichmusicstudio-5.jpg' },
-            { src: '/assets/img/work/gms/greenwichmusicstudio-6.jpg' }
+            { src: '/assets/img/work/gms/greenwichmusicstudio-1.jpg', rows: 2.3, cols: 4 },
+            { src: '/assets/img/work/gms/greenwichmusicstudio-2.jpg', rows: 2.3, cols: 4 },
+            {
+                hasSubGrid: true,
+                innerImgs: [
+                    { src: '/assets/img/work/gms/greenwichmusicstudio-3.jpg', rows: 1, cols: 1, height: '50%', padding: '0 0 10px 0' },
+                    { src: '/assets/img/work/gms/greenwichmusicstudio-5.jpg', rows: 1, cols: 1, height: '50%', padding: '10px 0 0 0'  }
+                ],
+                rows: 3,
+                cols: 1.5
+            },
+            { src: '/assets/img/work/gms/greenwichmusicstudio-4.jpg', rows: 3, cols: 2.5 },
+            { src: '/assets/img/work/gms/greenwichmusicstudio-6.jpg', rows: 2.3, cols: 4 }
         ]
+    },
+    'ad-holiday': {
+        title: 'Adler Design - Holiday Greetings',
+        description: 'Every holiday season, Adler Design makes a donation to Doctors without Borders. To celebrate the new year, an animated gif is designed to accompany the holiday e-card.',
+        designAgency: 'Adler Design',
+        creativeDirection: 'Deborah Adler',
+        role: 'Designer',
+        images: []
     },
     'aiga': {
         title: 'AIGA Women Lead Initiative',
@@ -149,8 +204,8 @@ export default {
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/aiga/aiga-1.jpg' },
-            { src: '/assets/img/work/aiga/aiga-2.jpg' },
+            { src: '/assets/img/work/aiga/aiga-1.jpg', rows: 2.3, cols: 4   },
+            { src: '/assets/img/work/aiga/aiga-2.jpg', rows: 2.3, cols: 4   },
         ]
     },
     'firstleaf': {
@@ -160,10 +215,10 @@ export default {
         agency: 'Penrose Hill',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/firstleaf/firstleaf-1.jpg' },
-            { src: '/assets/img/work/firstleaf/firstleaf-2.jpg' },
-            { src: '/assets/img/work/firstleaf/firstleaf-3.jpg' },
-            { src: '/assets/img/work/firstleaf/firstleaf-4.jpg' }
+            { src: '/assets/img/work/firstleaf/firstleaf-1.jpg', rows: 4, cols: 4   },
+            { src: '/assets/img/work/firstleaf/firstleaf-2.jpg', rows: 2.3, cols: 4   },
+            { src: '/assets/img/work/firstleaf/firstleaf-3.jpg', rows: 2, cols: 2   },
+            { src: '/assets/img/work/firstleaf/firstleaf-4.jpg', rows: 2, cols: 2   }
         ]
     },
     'hp': {

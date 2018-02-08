@@ -6,9 +6,13 @@ import compose from 'recompose/compose';
 import { Link } from 'react-router-dom'
 
 const styleSheet = theme => ({
-    headerWrapper: {
-        padding: '1em 5em',
+    headerContainer:{
         backgroundColor: theme.palette.secondaryColor
+    },
+    headerWrapper: {
+        margin: 'auto',
+        padding: '1em 0',
+        maxWidth: 1000
     },
     headerLinks: {
         textDecoration: 'none',
@@ -36,13 +40,15 @@ const styleSheet = theme => ({
 const Header = ({
     classes
 }) => (
-    <div className={classes.headerWrapper}>
-        <div className={classes.firstSection}>
-            <Link className={classes.headerLinks} to="/"> Aerial Chen </Link>
-        </div>
-        <div className={classes.secondSection}>
-            <Link className={classes.headerLinks} to="/"> Work </Link>
-            <Link className={classes.headerLinks} to="/about"> About </Link>
+    <div className={classes.headerContainer}>
+        <div className={classes.headerWrapper}>
+            <div className={classes.firstSection}>
+                <Link className={classes.headerLinks} to="/"> Aerial Chen </Link>
+            </div>
+            <div className={classes.secondSection}>
+                <Link className={classes.headerLinks} to="/"> Work </Link>
+                <Link className={classes.headerLinks} to="/about"> About </Link>
+            </div>
         </div>
     </div>
 );

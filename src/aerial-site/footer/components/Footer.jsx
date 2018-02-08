@@ -4,9 +4,13 @@ import pure from 'recompose/pure';
 import compose from 'recompose/compose';
 
 const styleSheet = theme => ({
-    footerWrapper: {
-        padding: '1em 5em',
+    footerContainer: {
         backgroundColor: theme.palette.secondaryColor
+    },
+    footerWrapper: {
+        margin: 'auto',
+        padding: '1em 0',
+        maxWidth: 1000
     },
     footerLinks: {
         textDecoration: 'none',
@@ -34,13 +38,15 @@ const styleSheet = theme => ({
 const Footer = ({
     classes
 }) => (
-        <div className={classes.footerWrapper}>
-            <div className={classes.firstSection}>
-                <div className={classes.footerLinks}> &copy; 2018 Aerial Chen </div>
-            </div>
-            <div className={classes.secondSection}>
-                <a className={classes.footerLinks} href="mailto:aerialah@gmail.com"> contact </a>
-                <a className={classes.footerLinks} href="https://www.linkedin.com/in/aerialchen" target="_blank"> linkedin </a>
+        <div className={classes.footerContainer}>
+            <div className={classes.footerWrapper}>
+                <div className={classes.firstSection}>
+                    <div className={classes.footerLinks}> &copy; 2018 Aerial Chen </div>
+                </div>
+                <div className={classes.secondSection}>
+                    <a className={classes.footerLinks} href="mailto:aerialah@gmail.com"> contact </a>
+                    <a className={classes.footerLinks} href="https://www.linkedin.com/in/aerialchen" target="_blank"> linkedin </a>
+                </div>
             </div>
         </div>
     );

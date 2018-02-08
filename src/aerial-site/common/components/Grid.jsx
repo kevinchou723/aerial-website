@@ -3,46 +3,88 @@ import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
-import Masonry from 'react-masonry-component';
+// import Masonry from 'react-masonry-component';
+import GridList, { GridListTile } from 'material-ui/GridList';
+import Dimensions from 'react-dimensions'
 
 const styleSheet = theme => ({
     gridContainer: {
-        margin: '5em'
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
     },
-    image:{
-        width: '100%'
+    subGridTile: {
+
     }
 });
 
-const Grid = ({
-    classes, images
-}) => (
-    <Masonry
-        className={classes.gridContainer}
-        options={{
-            columnWidth: 200,
-            // itemSelector: '.grid-item'
-        }}
-    >
-        {
-            images.map((img) => {
-                return (
-                    // <Image
-                    //     src={img.src}
-                    // />
-                    <img className={classes.image} alt='img' src={img.src} />
-                );
-            })
-        }
-    </Masonry>
-);
-
-
-// const Image = injectSheet(styleSheet)(({
-//     classes, src
-// }) => (
-//         <img alt='img' src={src} />
-// ));
+const Grid = ({ classes, images, containerWidth }) => {
+    return (
+        <div className={classes.gridContainer}>
+            <GridList cellHeight={containerWidth/4} className={classes.gridList} spacing={20} cols={4}>
+                {
+                    images.map(img => {
+                        if(img.hasSubGrid){
+                            return (
+                                <GridListTile key={img.src} rows={img.rows || 1} cols={img.cols || 1}>
+                                    {
+                                        img.innerImgs.map((img) => {
+                                            if(img.hasSubGrid){
+                                                return (
+                                                    <GridListTile key={img.src} rows={img.rows || 1} cols={img.cols || 1}>
+                                                        {
+                                                            img.innerImgs.map((img) => {
+                                                                return (
+                                                                    <GridListTile
+                                                                        className={classes.subGridTile}
+                                                                        key={img.src}
+                                                                        rows={img.rows || 1}
+                                                                        cols={img.cols || 1}
+                                                                        style={{
+                                                                            height: img.height,
+                                                                            padding: img.padding
+                                                                        }}
+                                                                    >
+                                                                        <img src={img.src} alt='img' />
+                                                                    </GridListTile>
+                                                                );
+                                                            })
+                                                        }
+                                                    </GridListTile>
+                                                );
+                                            }
+                                            return (
+                                                <GridListTile 
+                                                    className={classes.subGridTile}
+                                                    key={img.src}
+                                                    rows={img.rows || 1}
+                                                    cols={img.cols || 1}
+                                                    style={{
+                                                        height: img.height,
+                                                        padding: img.padding
+                                                    }}
+                                                >
+                                                    <img src={img.src} alt='img' />
+                                                </GridListTile>
+                                            );
+                                        })
+                                    }
+                                </GridListTile>
+                            );
+                        }
+                        
+                        return (
+                            <GridListTile key={img.src} rows={img.rows || 1} cols={img.cols || 1}>
+                                <img src={img.src} alt='img' />
+                            </GridListTile>
+                        )
+                    })
+                }
+            </GridList>
+        </div>
+    );
+}
 
 Grid.propTypes = {
 
@@ -56,4 +98,4 @@ Grid.defaultProps = {
 export default compose(
     injectSheet(styleSheet),
     pure
-)(Grid);
+)(Dimensions()(Grid));

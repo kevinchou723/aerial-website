@@ -6,7 +6,8 @@ import compose from 'recompose/compose';
 
 const styleSheet = theme => ({
     panelContainer: {
-        margin: '5em'
+        margin: '5em auto',
+        maxWidth: 1000
     }
 });
 
