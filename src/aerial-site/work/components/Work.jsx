@@ -132,13 +132,13 @@ const Navigation = injectSheet(styleSheet)(({
 })=> {
     return (
         <div className={classes.navigationContainer}>
-            <Link className={classes.prevLinkButton} to={`/work/${prevPage}`}>
+            <Link className={classes.prevLinkButton} to={`/${prevPage}`}>
                 <div className={classes.prevArrow} />
                 <div className={classes.linkText}>
                     {pageTitles[prevPage]}
                 </div>
             </Link>
-            <Link className={classes.nextLinkButton} to={`/work/${nextPage}`}>
+            <Link className={classes.nextLinkButton} to={`/${nextPage}`}>
                 <div className={classes.linkText}>
                     {pageTitles[nextPage]}
                 </div>

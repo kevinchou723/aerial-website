@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const styleSheet = theme => ({
     headerContainer:{

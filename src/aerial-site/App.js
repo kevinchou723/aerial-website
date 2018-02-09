@@ -6,6 +6,7 @@ import { Header } from './header';
 import { Footer } from './footer';
 import { About } from './about';
 import { Work } from './work';
+import { Home } from './home';
 
 
 const styleSheet = theme => ({
@@ -14,12 +15,7 @@ const styleSheet = theme => ({
 
 const HomeRoute = props => {
   return (
-    <div className="App">
-      <p className="App-intro">
-        <img src='assets/img/logo.svg' className="App-logo" alt="logo" />
-        this is home page  
-      </p>
-    </div>
+    <Home {...props}/>
   );
 }
 
@@ -41,7 +37,7 @@ const App = (props) => {
       <Header/> 
       <Route exact path="/" render={props => <HomeRoute/>} />
       <Route exact path="/about" render={props => <AboutRoute />} />
-      <Route path="/work/:workType" render={props => <WorkRoute routeParams={props.match.params} />} />
+      <Route path="/:workType" render={props => <WorkRoute routeParams={props.match.params} />} />
       <Footer/>
     </div>
   )
