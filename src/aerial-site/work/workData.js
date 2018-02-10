@@ -13,7 +13,15 @@ export default {
             { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-4.jpg', rows: 2, cols: 4 },
             { src: '/assets/img/work/fab-holiday/fab-2017holidaykits-5.jpg', rows: 2, cols: 4 }
         ],
-        profileImg: '/assets/img/work/hp/hp-1.jpg'
+        mobileImages: [
+            { src: '/assets/img/work/fab-holiday/m-fab-2017holidaykits-1.jpg'},
+            { src: '/assets/img/work/fab-holiday/m-fab-2017holidaykits-2.jpg'},
+            { src: '/assets/img/work/fab-holiday/m-fab-2017holidaykits-3.jpg'},
+            { src: '/assets/img/work/fab-holiday/m-fab-2017holidaykits-4.jpg'},
+            { src: '/assets/img/work/fab-holiday/m-fab-2017holidaykits-5.jpg'}
+        ],
+        profileImg: '/assets/img/work/hp/hp-1.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-1.jpg'
     },
     'fab-selectedkits': {
         title: 'First Aid Beauty - Selected Kits',
@@ -30,7 +38,16 @@ export default {
             { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-5.jpg', rows: 2, cols: 2 },
             { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-6.jpg', rows: 2, cols: 4 }
         ],
-        profileImg: '/assets/img/work/hp/hp-2.jpg'
+        mobileImages: [
+            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-1.jpg' },
+            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-2.jpg' },
+            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-3.jpg' },
+            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-4.jpg' },
+            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-5.jpg' },
+            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-6.jpg' }
+        ],
+        profileImg: '/assets/img/work/hp/hp-2.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-2.jpg'
     },
     'fab-hellofab': {
         title: 'First Aid Beauty - Hello FAB Collection',
@@ -53,7 +70,15 @@ export default {
             { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-3.jpg', rows: 4, cols: 2  },
             { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-5.jpg', rows: 2.3, cols: 4  }
         ],
-        profileImg: '/assets/img/work/hp/hp-3.jpg'
+        mobileImages: [
+            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-1.jpg' },
+            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-2.gif' },
+            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-4.jpg' },
+            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-3.jpg' },
+            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-5.jpg' }
+        ],
+        profileImg: '/assets/img/work/hp/hp-3.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-3.jpg'
     },
     'fab-printad': {
         title: 'First Aid Beauty - Print Ad',
@@ -65,7 +90,11 @@ export default {
         images: [
             { src: '/assets/img/work/fab-printad/fab-printad-1.jpg', rows: 4, cols: 4 }
         ],
-        profileImg: '/assets/img/work/hp/hp-4.jpg'
+        mobileImages: [
+            { src: '/assets/img/work/fab-printad/m-fab-printad-1.jpg' }
+        ],
+        profileImg: '/assets/img/work/hp/hp-4.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-4.jpg'
     },
     'fab-webredesign': {
         title: 'First Aid Beauty - Website Redesign',
@@ -75,18 +104,25 @@ export default {
         designAgency: 'Adler Design*',
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
-        subNote: '* Adler Design provided creative direction and brand assets to support the redesign.',
+        subNote: '*Adler Design provided creative direction and brand assets to support the redesign.',
         images: [
             { src: '/assets/img/work/fab-webredesign/fab-webredesign-1.jpg', rows: 2.3, cols: 4  },
             { src: '/assets/img/work/fab-webredesign/fab-webredesign-2.jpg', rows: 2, cols: 2  },
             { src: '/assets/img/work/fab-webredesign/fab-webredesign-3.jpg', rows: 2, cols: 2  },
             { src: '/assets/img/work/fab-webredesign/fab-webredesign-4.jpg', rows: 2.3, cols: 4  }
         ],
-        profileImg: '/assets/img/work/hp/hp-5.jpg'
+        mobileImages: [
+            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-1.jpg' },
+            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-2.jpg' },
+            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-3.jpg' },
+            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-4.jpg' }
+        ],
+        profileImg: '/assets/img/work/hp/hp-5.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-5.jpg'
     },
     'fab-collection': {
         title: 'First Aid Beauty - Collection',
-        description: 'First Aid Beauty believes that Skin Matters, Especially Yours. Each collection not only targets speci c skin concerns, but each product is formulated with safe ingredients that yield maximum results with minimum irritation.',
+        description: 'First Aid Beauty believes that Skin Matters, Especially Yours. Each collection not only targets specific skin concerns, but each product is formulated with safe ingredients that yield maximum results with minimum irritation.',
         client: 'First Aid Beauty',
         designAgency: 'Adler Design',
         creativeDirection: 'Deborah Adler',
@@ -114,7 +150,16 @@ export default {
             },
             { src: '/assets/img/work/fab-collection/fab-collection-6.jpg', rows: 3, cols: 2.5 },
         ],
-        profileImg: '/assets/img/work/hp/hp-6.jpg'
+        mobileImages:[
+            { src: '/assets/img/work/fab-collection/m-fab-collection-1.jpg' },
+            { src: '/assets/img/work/fab-collection/m-fab-collection-2.jpg' },
+            { src: '/assets/img/work/fab-collection/m-fab-collection-3.jpg' },
+            { src: '/assets/img/work/fab-collection/m-fab-collection-4.jpg' },
+            { src: '/assets/img/work/fab-collection/m-fab-collection-5.jpg' },
+            { src: '/assets/img/work/fab-collection/m-fab-collection-6.jpg'  },
+        ],
+        profileImg: '/assets/img/work/hp/hp-6.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-6.jpg'
     },
     'ppf': {
         title: 'Prelude & Pink Flamingo',
@@ -143,11 +188,30 @@ export default {
                 cols: 2
             }
         ],
-        profileImg: '/assets/img/work/hp/hp-7.jpg'
+        mobileImages: [
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-1.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-2.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-3.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-4.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-5.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-6.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-7.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-8.gif' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-9.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-10.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-11.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-12.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-13.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-14.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-15.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-16.jpg' },
+        ],
+        profileImg: '/assets/img/work/hp/hp-7.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-7.jpg'
     },
     'nomz': {
         title: 'NOMZ - Wholesome Asian Soups',
-        description: 'NOMZ specializes in wholesome Asian soups for busy individuals.Their vision is to create the most trusted, clean and accessible traditional Asian food brand in America.',
+        description: 'NOMZ specializes in wholesome Asian soups for busy individuals. Their vision is to create the most trusted, clean and accessible traditional Asian food brand in America.',
         client: 'NOMZ',
         role: 'Designer',
         images: [
@@ -157,11 +221,19 @@ export default {
             { src: '/assets/img/work/nomz/nomz-4.jpg', rows: 2.3, cols: 4  },
             { src: '/assets/img/work/nomz/nomz-5.jpg', rows: 2.3, cols: 4  }
         ],
-        profileImg: '/assets/img/work/hp/hp-8.jpg'
+        mobileImages: [
+            { src: '/assets/img/work/nomz/m-nomz-1.jpg'},
+            { src: '/assets/img/work/nomz/m-nomz-2.jpg'},
+            { src: '/assets/img/work/nomz/m-nomz-3.jpg'},
+            { src: '/assets/img/work/nomz/m-nomz-4.jpg'},
+            { src: '/assets/img/work/nomz/m-nomz-5.jpg'}
+        ],
+        profileImg: '/assets/img/work/hp/hp-8.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-8.jpg'
     },
     'gms': {
         title: 'Greenwich Music Studio',
-        description: 'Greenwich Music Studio is a Singapore - based music school that aims to promote quality music programs to corporate o ces, schools and private homes.Courses are tailored to individual or corporate goals to provide the best learning experiences taught by certi ed instructors.',
+        description: 'Greenwich Music Studio is a Singapore-based music school that aims to promote quality music programs to corporate offices, schools and private homes. Courses are tailored to individual or corporate goals to provide the best learning experiences taught by certified instructors.',
         client: 'Greenwich Music Studio',
         role: 'Designer',
         images: [
@@ -179,7 +251,15 @@ export default {
             { src: '/assets/img/work/gms/greenwichmusicstudio-4.jpg', rows: 3, cols: 2.5 },
             { src: '/assets/img/work/gms/greenwichmusicstudio-6.jpg', rows: 2.3, cols: 4 }
         ],
-        profileImg: '/assets/img/work/hp/hp-9.jpg'
+        mobileImages: [
+            { src: '/assets/img/work/gms/m-greenwichmusicstudio-1.jpg' },
+            { src: '/assets/img/work/gms/m-greenwichmusicstudio-2.jpg' },
+            { src: '/assets/img/work/gms/m-greenwichmusicstudio-3.jpg', rows: 0.5 },
+            { src: '/assets/img/work/gms/m-greenwichmusicstudio-4.jpg' },
+            { src: '/assets/img/work/gms/m-greenwichmusicstudio-6.jpg' }
+        ],
+        profileImg: '/assets/img/work/hp/hp-9.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-9.jpg'
     },
     'ad-holiday': {
         title: 'Adler Design - Holiday Greetings',
@@ -188,10 +268,15 @@ export default {
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
         images: [
-            { hasBgWrapper: true, src: '', rows: 4, cols: 4 },
-            { hasBgWrapper: true, src: '', rows: 4, cols: 4 },
+            { hasBgWrapper: true, src: '/assets/img/work/ad-holiday/ad-holiday-1.gif', rows: 4, cols: 4 },
+            { hasBgWrapper: true, src: '/assets/img/work/ad-holiday/ad-holiday-2.gif', rows: 4, cols: 4 },
         ],
-        profileImg: '/assets/img/work/hp/hp-10.jpg'
+        mobileImages: [
+            { src: '/assets/img/work/ad-holiday/ad-holiday-1.gif', rows: 1.25},
+            { src: '/assets/img/work/ad-holiday/ad-holiday-2.gif', rows: 1.25},
+        ],
+        profileImg: '/assets/img/work/hp/hp-10.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-10.jpg'
     },
     'aiga': {
         title: 'AIGA Women Lead Initiative',
@@ -202,10 +287,15 @@ export default {
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/aiga/aiga-1.jpg', rows: 2.3, cols: 4   },
-            { src: '/assets/img/work/aiga/aiga-2.jpg', rows: 2.3, cols: 4   },
+            { src: '/assets/img/work/aiga/aiga-1.jpg', rows: 2.3, cols: 4 },
+            { src: '/assets/img/work/aiga/aiga-2.jpg', rows: 2.3, cols: 4 },
         ],
-        profileImg: '/assets/img/work/hp/hp-11.jpg'
+        mobileImages: [
+            { src: '/assets/img/work/aiga/m-aiga-1.jpg' },
+            { src: '/assets/img/work/aiga/m-aiga-2.jpg' },
+        ],
+        profileImg: '/assets/img/work/hp/hp-11.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-11.jpg'
     },
     'firstleaf': {
         title: 'FirstLeaf - Cover Wraps',
@@ -214,27 +304,18 @@ export default {
         agency: 'Penrose Hill',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/firstleaf/firstleaf-1.jpg', rows: 4, cols: 4   },
-            { src: '/assets/img/work/firstleaf/firstleaf-2.jpg', rows: 2.3, cols: 4   },
-            { src: '/assets/img/work/firstleaf/firstleaf-3.jpg', rows: 2, cols: 2   },
-            { src: '/assets/img/work/firstleaf/firstleaf-4.jpg', rows: 2, cols: 2   }
+            { src: '/assets/img/work/firstleaf/firstleaf-1.jpg', rows: 4, cols: 4 },
+            { src: '/assets/img/work/firstleaf/firstleaf-2.jpg', rows: 2.3, cols: 4 },
+            { src: '/assets/img/work/firstleaf/firstleaf-3.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/firstleaf/firstleaf-4.jpg', rows: 2, cols: 2 }
         ],
-        profileImg: '/assets/img/work/hp/hp-12.jpg'
-    },
-    'hp': {
-        images: [
-            { src: '/assets/img/work/hp/hp-1.jpg', rows:2 , cols: 2 },
-            { src: '/assets/img/work/hp/hp-2.jpg', rows:1, cols: 2 },
-            { src: '/assets/img/work/hp/hp-3.jpg', rows: 1, cols: 2 },
-            { src: '/assets/img/work/hp/hp-4.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/hp/hp-5.jpg' },
-            { src: '/assets/img/work/hp/hp-6.jpg' },
-            { src: '/assets/img/work/hp/hp-7.jpg' },
-            { src: '/assets/img/work/hp/hp-8.jpg' },
-            { src: '/assets/img/work/hp/hp-9.jpg' },
-            { src: '/assets/img/work/hp/hp-10.jpg' },
-            { src: '/assets/img/work/hp/hp-11.jpg' },
-            { src: '/assets/img/work/hp/hp-12.jpg' }
-        ]
+        mobileImages: [
+            { src: '/assets/img/work/firstleaf/m-firstleaf-1.jpg' },
+            { src: '/assets/img/work/firstleaf/m-firstleaf-2.jpg' },
+            { src: '/assets/img/work/firstleaf/m-firstleaf-3.jpg' },
+            { src: '/assets/img/work/firstleaf/m-firstleaf-4.jpg' }
+        ],
+        profileImg: '/assets/img/work/hp/hp-12.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-12.jpg'
     }
 }

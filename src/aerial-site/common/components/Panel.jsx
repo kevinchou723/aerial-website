@@ -7,7 +7,10 @@ import compose from 'recompose/compose';
 const styleSheet = theme => ({
     panelContainer: {
         margin: '5em auto',
-        maxWidth: 1000
+        maxWidth: 1000,
+        [theme.breakpoints.down('sm')]:{
+            margin: '2em auto'
+        }
     }
 });
 

@@ -4,6 +4,7 @@ import injectSheet from 'react-jss';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
 import branch from 'recompose/branch';
+import lifecycle from 'recompose/lifecycle';
 import { Link } from 'react-router-dom';
 import { Panel, Grid } from '../../common';
 import renderNothing from 'recompose/renderNothing';
@@ -11,10 +12,18 @@ import { pageNames, pageTitles } from '../constants';
 
 const styleSheet = theme => ({
     topSection:{
-        marginBottom: '5%'
+        marginBottom: '5%',
+        color: theme.palette.primaryColor,
+        [theme.breakpoints.down('sm')]:{
+            padding: '0 2.5em'
+        }
     },
     title:{
-        marginBottom: 15
+        marginBottom: 15,
+        [theme.breakpoints.down('sm')]: {
+            marginBottom: 10,
+            lineHeight: 1.5
+        }
     },
     description:{
         fontSize: '1.25em',
@@ -22,14 +31,25 @@ const styleSheet = theme => ({
         fontWeight: 300
     },
     infoWrapper:{
-        display: 'flex'
+        display: 'flex',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column'
+        }
     },
     leftInfo: {
-        width: '65%'
+        width: '65%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            margin: '10px 0'
+        }
     },
     rightInfo: {
         marginLeft: '9%',
-        lineHeight: '1.5'
+        lineHeight: 1.5,
+        [theme.breakpoints.down('sm')]: {
+            margin: '10px 0',
+            lineHeight: 1.75
+        }
     },
     infoTitle: {
         fontWeight: 700
@@ -41,7 +61,11 @@ const styleSheet = theme => ({
         alignItems: 'center',
         marginTop: 120,
         paddingTop: 40,
-        borderTop: `2px solid ${theme.palette.secondaryColor}`
+        borderTop: `2px solid ${theme.palette.secondaryColor}`,
+        [theme.breakpoints.down('sm')]:{
+            margin: 0,
+            border: 'none'
+        }
     },
     prevArrow:{
         width: 10,
@@ -51,7 +75,10 @@ const styleSheet = theme => ({
         borderStyle: 'solid',
         borderColor: theme.palette.primaryColor,
         transform: 'rotate(-45deg)',
-        marginRight: 25
+        marginRight: 25,
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        }
     },
     nextArrow:{
         width: 10,
@@ -61,13 +88,30 @@ const styleSheet = theme => ({
         borderStyle: 'solid',
         borderColor: theme.palette.primaryColor,
         transform: 'rotate(135deg)',
-        marginLeft: 25
+        marginLeft: 25,
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        }
     },
     prevLinkButton: {
-        visibility: ({prevPage}) => prevPage ? 'visible' : 'hidden'
+        visibility: ({ prevPage }) => prevPage ? 'visible' : 'hidden',
+        [theme.breakpoints.down('sm')]: {
+            textAlign: 'center',
+            boxSizing: 'border-box',
+            borderRight: `2px solid ${theme.palette.primaryColor}`,
+            width: '50%'
+        }
     },
     nextLinkButton: {
-        visibility: ({ nextPage }) => nextPage ? 'visible' : 'hidden'
+        visibility: ({ nextPage }) => nextPage ? 'visible' : 'hidden',
+        [theme.breakpoints.down('sm')]: {
+            textAlign: 'center',
+            boxSizing: 'border-box',
+            width: '50%',
+            borderLeft: ({ prevPage }) => {
+                return prevPage ? 'none' : `2px solid ${theme.palette.primaryColor}`;
+            }
+        }
     },
     linkText:{
         display: 'inline-block',
@@ -77,12 +121,31 @@ const styleSheet = theme => ({
         color: theme.palette.primaryColor,
         '&:hover': {
             color: theme.palette.black
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '1em',
+            textAlign: 'center',
+            padding: '0 1.1em',
+            lineHeight: 1.5
+        }
+    },
+    subNote:{
+        fontWeight: 300,
+        color: theme.palette.primaryColor,
+        marginTop: 15,
+        [theme.breakpoints.down('sm')]: {
+            margin: 0,
+            borderBottom: `1px solid ${theme.palette.secondaryColor}`,
+            padding: '1.5em 2.5em',
+            lineHeight: 1.5
         }
     }
 });
 
 const branchProp = branch(
-    ({ workType, workData }) => workType != '' && workData[workType] != undefined,
+    ({ workType, workData }) => {
+        return workType != '' && workData[workType] != undefined
+    },
     Work => Work,
     renderNothing
 );
@@ -90,19 +153,21 @@ const branchProp = branch(
 const Work = ({
     classes, workType, workData
     }) => {
-    window.scroll(0, 0);
+
     const work = workData[workType];
+    const isMobile = window.innerWidth < 600;
     const currentIndex = pageNames.findIndex((nav) => nav === workType);
     const prevPage = pageNames[currentIndex - 1];
     const nextPage = pageNames[currentIndex + 1];
-
+    const images = isMobile ? work.mobileImages : work.images;
     return (
         <Panel>
             <div className={classes.topSection}>
                 <h2 className={classes.title}>{work.title}</h2>
                 <Info work={work}/>
             </div>
-            <Grid images={work.images}/>
+            <Grid images={images} isMobile={isMobile}/>
+            {work.subNote && <p className={classes.subNote}>{work.subNote}</p>}
             <Navigation nextPage={nextPage} prevPage={prevPage}/>
         </Panel>
     );
@@ -157,9 +222,15 @@ Work.defaultProps = {
 
 }
 
+const onProps = {
+    componentWillReceiveProps: (nextProps) => {
+        if (window.pageYOffset !== 0) window.scroll(0, 0);
+    }
+}
 
 export default compose(
     injectSheet(styleSheet),
     branchProp,
+    lifecycle(onProps),
     pure
 )(Work);

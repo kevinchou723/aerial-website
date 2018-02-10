@@ -5,6 +5,7 @@ import compose from 'recompose/compose';
 import { Panel } from '../../common';
 import Flexbox from 'flexbox-react';
 import { Link } from 'react-router-dom';
+import { pageNames } from '../../work/constants';
 
 const styleSheet = theme => ({
     mainFlexBox:{
@@ -14,7 +15,8 @@ const styleSheet = theme => ({
         textDecoration: 'none',
         color: theme.palette.primaryColor,
         '&:hover':{
-            color: theme.palette.black
+            color: theme.palette.black,
+            opacity: 0.9
         }
     },
     image: {
@@ -27,13 +29,21 @@ const styleSheet = theme => ({
         alignItems: 'flex-start',
         paddingTop: 15,
         fontWeight: 300,
-        fontSize: '0.85em'
+        fontSize: '0.85em',
+        [theme.breakpoints.down('sm')]: {
+            padding: '1em 2.5em 1.5em 2.5em',
+            fontSize: '1em',
+            fontWeight: 500
+        }
     },
     flexSquare: {
         padding: 10,
         '& img': {
             maxWidth: 480,
             maxHeight: 480
+        },
+        [theme.breakpoints.down('sm')]: {
+            padding: 0
         }
     },
     flexSmallRec:{
@@ -60,9 +70,44 @@ const styleSheet = theme => ({
 
 const Home = ({
     classes, workData
-}) => (
-    <Panel>
-        <Flexbox className={classes.mainFlexBox}>
+}) => {
+    const isMobile = window.innerWidth <= 600;
+    return (
+        <Panel>
+            <Flexbox className={classes.mainFlexBox}>
+                {isMobile ? <MobileHomeGrid workData={workData} /> : <DesktopHomeGrid workData={workData}/> }
+            </Flexbox>
+        </Panel>
+    );
+};
+
+const MobileHomeGrid = injectSheet(styleSheet)(({
+    classes, workData
+}) => {
+    return (
+        <Flexbox flexDirection="column">
+            {
+                pageNames.map((pageName) => {
+                    return (
+                        <Flexbox className={classes.flexSquare}>
+                            <ImageBox
+                                to={`/${pageName}`}
+                                imgSrc={workData[pageName].mobileProfileImg}
+                                title={workData[pageName].title}
+                            />
+                        </Flexbox>
+                    )
+                })
+            }
+        </Flexbox>
+    );
+});
+
+const DesktopHomeGrid = injectSheet(styleSheet)(({
+    classes, workData
+}) => {
+    return (
+        <React.Fragment>
             <Flexbox flexDirection="column">
                 <Flexbox className={classes.flexSquare}>
                     <ImageBox
@@ -156,9 +201,9 @@ const Home = ({
                     />
                 </Flexbox>
             </Flexbox>
-        </Flexbox>
-    </Panel>
-);
+        </React.Fragment>
+    );
+});
 
 const ImageBox = injectSheet(styleSheet)(({
     classes, to, imgSrc, title

@@ -10,7 +10,10 @@ const styleSheet = theme => ({
     footerWrapper: {
         margin: 'auto',
         padding: '1em 0',
-        maxWidth: 1000
+        maxWidth: 1000,
+        [theme.breakpoints.down('sm')]:{
+            padding: '1em 2.5em'
+        }
     },
     footerLinks: {
         textDecoration: 'none',
@@ -21,6 +24,10 @@ const styleSheet = theme => ({
         marginRight: '1em',
         '&:hover': {
             color: theme.palette.black
+        },
+        [theme.breakpoints.down('sm')]:{
+            fontSize: '0.85em',
+            fontWeight: 700
         }
     },
     firstSection: {

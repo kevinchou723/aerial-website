@@ -14,27 +14,37 @@ const styleSheet = theme => ({
         overflow: 'hidden',
     },
     subGridTile: {
-        backgroundColor: 'red',
-        minWidth: 1000
+        backgroundColor: theme.palette.holidayRed,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    subGridImg:{
+        width: '50%',
+        margin: '15% 0'
     }
 });
 
-const Grid = ({ classes, images, containerWidth }) => {
+const Grid = ({ classes, images, isMobile, containerWidth }) => {
+
+    const cellHeight = isMobile ? window.innerWidth : (containerWidth/4);
+    const columns = isMobile ? 1 : 4;
+    
     return (
         <div className={classes.gridContainer}>
-            <GridList cellHeight={containerWidth/4} className={classes.gridList} spacing={20} cols={4}>
+            <GridList cellHeight={cellHeight} className={classes.gridList} spacing={20} cols={columns}>
                 {
                     images.map(img => {
 
                         //sorry for this ugly ass code, but this is to make grids within grids. Temporary
                         if(img.hasSubGrid){
                             return (
-                                <GridListTile key={img.src} rows={img.rows || 1} cols={img.cols || 1}>
+                                <GridListTile key={Math.floor(Math.random() * 9999)} rows={img.rows || 1} cols={img.cols || 1}>
                                     {
                                         img.innerImgs.map((img) => {
                                             return (
                                                 <GridListTile 
-                                                    key={img.src}
+                                                    key={Math.floor(Math.random() * 9999)}
                                                     rows={img.rows || 1}
                                                     cols={img.cols || 1}
                                                     style={{
@@ -53,16 +63,18 @@ const Grid = ({ classes, images, containerWidth }) => {
 
                         if(img.hasBgWrapper){
                             return (
-                                <GridListTile key={img.src} rows={img.rows || 1} cols={img.cols || 1}>
+                                <GridListTile style={{
+                                    height: 'auto'
+                                }} key={Math.floor(Math.random() * 9999)} rows={img.rows || 1} cols={img.cols || 1}>
                                     <div className={classes.subGridTile}>
-                                        <img src={img.src} alt='img' />
+                                        <img className={classes.subGridImg} src={img.src} alt='img' />
                                     </div>
                                 </GridListTile>
                             );
                         }
                         
                         return (
-                            <GridListTile key={img.src} rows={img.rows || 1} cols={img.cols || 1}>
+                            <GridListTile key={Math.random()} rows={img.rows || 1} cols={img.cols || 1}>
                                 <img src={img.src} alt='img' />
                             </GridListTile>
                         )
