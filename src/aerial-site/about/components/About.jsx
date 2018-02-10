@@ -6,15 +6,23 @@ import compose from 'recompose/compose';
 import { Panel } from '../../common';
 
 const styleSheet = theme => ({
-    aboutWrapper:{},
+    aboutWrapper:{
+    },
     topSection:{
-        margin: '1em 0'
+        margin: '1em 0',
+        [theme.breakpoints.down('xs')]: {
+            padding: '0 2.5em'
+        }
     },
     quote:{
         marginBottom: '0.3em',
         color: theme.palette.primaryColor,
         fontWeight: 700,
-        fontSize: '2.25em'
+        fontSize: '2.25em',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '1.5em',
+            lineHeight: 1.5
+        }
     },
     albert:{
         color: theme.palette.primaryColor,
@@ -28,22 +36,41 @@ const styleSheet = theme => ({
     },
     bottomSection: {
         margin: '2em 0',
-        display: 'flex'
+        display: 'flex',
+        [theme.breakpoints.down('xs')]: {
+            padding: '0 2.5em',
+            flexDirection: 'column'
+        }
     },
     bottomLeft:{
-        width: '71%'
+        width: '71%',
+        [theme.breakpoints.down('xs')]: {
+            width: '100%'
+        }
     },
     description:{
         fontWeight: 300,
         fontSize: '1.8em',
-        lineHeight: '1.6em'
+        lineHeight: '1.6em',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '1.2em'
+        }
     },
     bottomRight:{
         marginLeft: 'auto',
-        width: '20%'
+        width: '20%',
+        [theme.breakpoints.down('xs')]: {
+            margin: '0',
+            width: '100%'
+        }
     },
     contactWrapper:{
-        paddingBottom: '2em'
+        paddingBottom: '2em',
+        [theme.breakpoints.down('xs')]: {
+            marginTop: '2em',
+            padding: '2em 0',
+            borderTop: `1px solid ${theme.palette.primaryColor}`
+        }
     },
     linkedinWrapper:{
         padding: '2em 0',
@@ -61,6 +88,9 @@ const styleSheet = theme => ({
         fontSize: '2.25em',
         '&:hover': {
             color: theme.palette.black
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '1.75em'
         }
     },
     email:{
@@ -84,50 +114,54 @@ const styleSheet = theme => ({
 
 const About = ({
     classes
-}) => (
-    <Panel>
-        <div className={classes.aboutWrapper}>
-            <div className={classes.topSection}>
-                <h2 className={classes.quote}>“Creativity is intelligence having fun”</h2>
-                <p className={classes.albert}>- Albert Einstein</p>
-            </div>
-            <div className={classes.midSection}>
-                <img alt="about" className={classes.aboutImage} src="/assets/img/about/about.jpg"/>
-            </div>
-            <div className={classes.bottomSection}>
-                <div className={classes.bottomLeft}>
-                    <p className={classes.description}>
-                        Aerial Chen is a Graphic Designer based in New York City. 
-                        She previously worked at the multidisciplinary studio Adler Design 
-                        following graduation from the School of Visual Arts.  Aerial’s work is designed to 
-                        delight, whilst educating and forming meaningful connections and experiences. 
-                        When Aerial is away from her keyboard, she enjoys letting her mind wander and 
-                        observing the minutiae of everyday life, with a pencil in one hand and a sketchbook in 
+}) => {
+    const isMobile= window.innerWidth <= 600;
+    const profileImage = isMobile ? "/assets/img/about/m-about.jpg" : "/assets/img/about/about.jpg";
+    return (
+        <Panel>
+            <div className={classes.aboutWrapper}>
+                <div className={classes.topSection}>
+                    <h2 className={classes.quote}>“Creativity is intelligence having fun”</h2>
+                    <p className={classes.albert}>- Albert Einstein</p>
+                </div>
+                <div className={classes.midSection}>
+                    <img alt="about" className={classes.aboutImage} src={profileImage}/>
+                </div>
+                <div className={classes.bottomSection}>
+                    <div className={classes.bottomLeft}>
+                        <p className={classes.description}>
+                            Aerial Chen is a Graphic Designer based in New York City.
+                        She previously worked at the multidisciplinary studio Adler Design
+                        following graduation from the School of Visual Arts.  Aerial’s work is designed to
+                        delight, whilst educating and forming meaningful connections and experiences.
+                        When Aerial is away from her keyboard, she enjoys letting her mind wander and
+                        observing the minutiae of everyday life, with a pencil in one hand and a sketchbook in
                         the other.
                     </p>
-                </div>
-                <div className={classes.bottomRight}>
-                    <div className={classes.contactWrapper}>
-                        <div>
-                            <a className={classes.sectionTitle} href="mailto:aerialah@gmail.com"> Contact </a>
-                        </div>
-                        <div>
-                            <a className={classes.email} href="mailto:aerialah@gmail.com"> aerialah@gmail.com </a>
-                        </div>
                     </div>
-                    <div className={classes.linkedinWrapper}>
-                        <a className={classes.sectionTitle} href="https://www.linkedin.com/in/aerialchen" target="_blank"> LinkedIn </a>
-                    </div>
-                    <div className={classes.siteByWrapper}>
-                        <p className={classes.site}>Site:</p>
-                        <p className={classes.by}>Designed by Aerial Chen</p>
-                        <p className={classes.by}>Developed by Kevin Chou</p>
+                    <div className={classes.bottomRight}>
+                        <div className={classes.contactWrapper}>
+                            <div>
+                                <a className={classes.sectionTitle} href="mailto:aerialah@gmail.com"> Contact </a>
+                            </div>
+                            <div>
+                                <a className={classes.email} href="mailto:aerialah@gmail.com"> aerialah@gmail.com </a>
+                            </div>
+                        </div>
+                        <div className={classes.linkedinWrapper}>
+                            <a className={classes.sectionTitle} href="https://www.linkedin.com/in/aerialchen" target="_blank"> LinkedIn </a>
+                        </div>
+                        <div className={classes.siteByWrapper}>
+                            <p className={classes.site}>Site:</p>
+                            <p className={classes.by}>Designed by Aerial Chen</p>
+                            <p className={classes.by}>Developed by Kevin Chou</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </Panel>
-);
+        </Panel>
+    );
+};
 
 const onProps = {
     componentDidMount: (nextProps) => {
