@@ -11,7 +11,7 @@ const styleSheet = theme => ({
         margin: 'auto',
         padding: '1em 0',
         maxWidth: 1000,
-        [theme.breakpoints.down('sm')]:{
+        [theme.breakpoints.down('xs')]:{
             padding: '1em 2.5em'
         }
     },
@@ -25,7 +25,7 @@ const styleSheet = theme => ({
         '&:hover': {
             color: theme.palette.black
         },
-        [theme.breakpoints.down('sm')]:{
+        [theme.breakpoints.down('xs')]:{
             fontSize: '0.85em',
             fontWeight: 700
         }

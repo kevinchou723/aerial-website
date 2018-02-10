@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { Header } from '../components';
+import { MobileMenu } from '../components';
 import {
     setMobileMenuOpen
 } from '../../home/actions';
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch) => ({
     }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(MobileMenu);

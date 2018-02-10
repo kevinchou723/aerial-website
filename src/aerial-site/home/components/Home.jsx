@@ -9,7 +9,7 @@ import { pageNames } from '../../work/constants';
 
 const styleSheet = theme => ({
     mainFlexBox:{
-        justifyContent: 'center'
+        justifyContent: 'space-between'
     },
     linkBox:{
         textDecoration: 'none',
@@ -27,29 +27,29 @@ const styleSheet = theme => ({
         minHeight: 35,
         display: 'flex',
         alignItems: 'flex-start',
-        paddingTop: 15,
+        padding: '15px 0',
         fontWeight: 300,
         fontSize: '0.85em',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             padding: '1em 2.5em 1.5em 2.5em',
             fontSize: '1em',
             fontWeight: 500
         }
     },
     flexSquare: {
-        padding: 10,
+        padding: '10px auto',
         '& img': {
-            maxWidth: 480,
-            maxHeight: 480
+            maxWidth: 490,
+            maxHeight: 490
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             padding: 0
         }
     },
     flexSmallRec:{
-        padding: 10,
+        padding: '10px auto',
         '& img': {
-            maxWidth: 480
+            maxWidth: 490,
         }
     },
     flexSmSqLeft:{

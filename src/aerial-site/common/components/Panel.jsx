@@ -8,7 +8,7 @@ const styleSheet = theme => ({
     panelContainer: {
         margin: '5em auto',
         maxWidth: 1000,
-        [theme.breakpoints.down('sm')]:{
+        [theme.breakpoints.down('xs')]:{
             margin: '2em auto'
         }
     }

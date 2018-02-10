@@ -7,6 +7,7 @@ import { Footer } from './footer';
 import { About } from './about';
 import { Work } from './work';
 import { Home } from './home';
+import { MobileMenu } from './mobileMenu';
 
 
 const styleSheet = theme => ({
@@ -34,7 +35,8 @@ const WorkRoute = props => {
 const App = (props) => {
   return ( 
     <div className={props.classes.appContainer}>
-      <Header/> 
+      <Header/>
+      <MobileMenu/>
       <Route exact path="/" render={props => <HomeRoute/>} />
       <Route exact path="/about" render={props => <AboutRoute />} />
       <Route path="/:workType" render={props => <WorkRoute routeParams={props.match.params} />} />

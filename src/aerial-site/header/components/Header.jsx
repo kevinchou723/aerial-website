@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import withHandlers from 'recompose/withHandlers';
 import injectSheet from 'react-jss';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
 import { Link } from 'react-router-dom';
-
-import withState from 'recompose/withState';
-import withHandlers from 'recompose/withHandlers';
+import Headroom from 'react-headroom';
 
 const styleSheet = theme => ({
+    headRoom: {
+        [theme.breakpoints.down('xs')]: {
+            position: ({ isMobileMenuOpen }) => {
+                return isMobileMenuOpen ? 'fixed' : 'relative';
+            }
+        }
+    },
     headerContainer:{
         backgroundColor: theme.palette.secondaryColor
     },
@@ -18,7 +24,7 @@ const styleSheet = theme => ({
         margin: 'auto',
         padding: '1em 0',
         maxWidth: 1000,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             padding: '1em 2.5em'
         }
     },
@@ -39,13 +45,13 @@ const styleSheet = theme => ({
         '& :last-child': {
             margin: 0
         },
-        [theme.breakpoints.down('sm')]:{
+        [theme.breakpoints.down('xs')]:{
             display: 'none'
         }
     },
     mobileSection:{
         display: 'none',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             display: 'flex',
             alignItems: 'center'
         }
@@ -59,29 +65,29 @@ const styleSheet = theme => ({
     }
 });
 
-const openState = withState('isMenuOpen', 'setOpen', false);
-
 const handlers = withHandlers({
-    handleClick: ({ isMenuOpen, setOpen }) => event => setOpen(!isMenuOpen)
+    handleClick: ({ isMobileMenuOpen, setMobileMenuOpen }) => event => setMobileMenuOpen(!isMobileMenuOpen)
 });
 
 const Header = ({
-    classes, isMenuOpen, handleClick
+    classes, isMobileMenuOpen, handleClick
 }) => (
-    <div className={classes.headerContainer}>
-        <div className={classes.headerWrapper}>
-            <div className={classes.firstSection}>
-                <Link className={classes.headerLinks} to="/"> Aerial Chen </Link>
-            </div>
-            <div className={classes.secondSection}>
-                <Link className={classes.headerLinks} to="/"> Work </Link>
-                <Link className={classes.headerLinks} to="/about"> About </Link>
-            </div>
-            <div className={classes.mobileSection}>
-                <MenuButton isMenuOpen={isMenuOpen} onClick={handleClick} />
+    <Headroom disable={isMobileMenuOpen} className={classes.headRoom}>
+        <div className={classes.headerContainer}>
+            <div className={classes.headerWrapper}>
+                <div className={classes.firstSection}>
+                    <Link className={classes.headerLinks} to="/"> Aerial Chen </Link>
+                </div>
+                <div className={classes.secondSection}>
+                    <Link className={classes.headerLinks} to="/"> Work </Link>
+                    <Link className={classes.headerLinks} to="/about"> About </Link>
+                </div>
+                <div className={classes.mobileSection}>
+                        <MenuButton isMenuOpen={isMobileMenuOpen} onClick={handleClick} />
+                </div>
             </div>
         </div>
-    </div>
+    </Headroom>
 );
 
 
@@ -91,7 +97,7 @@ const MenuButton = injectSheet(styleSheet)(({
     return (
         <div className={classes.menuButton}
             onClick={onClick}
-        ></div>
+        />
     )
 });
 
@@ -105,7 +111,6 @@ Header.defaultProps = {
 
 
 export default compose(
-    openState,
     handlers,
     injectSheet(styleSheet),
     pure

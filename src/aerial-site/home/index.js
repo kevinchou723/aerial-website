@@ -1,4 +1,6 @@
 import { Home } from './containers';
+import reducer from './reducer';
 export {
-    Home
+    Home,
+    reducer
 };

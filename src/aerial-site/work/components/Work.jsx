@@ -14,13 +14,13 @@ const styleSheet = theme => ({
     topSection:{
         marginBottom: '5%',
         color: theme.palette.primaryColor,
-        [theme.breakpoints.down('sm')]:{
+        [theme.breakpoints.down('xs')]:{
             padding: '0 2.5em'
         }
     },
     title:{
         marginBottom: 15,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             marginBottom: 10,
             lineHeight: 1.5
         }
@@ -32,13 +32,13 @@ const styleSheet = theme => ({
     },
     infoWrapper:{
         display: 'flex',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             flexDirection: 'column'
         }
     },
     leftInfo: {
         width: '65%',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             width: '100%',
             margin: '10px 0'
         }
@@ -46,7 +46,7 @@ const styleSheet = theme => ({
     rightInfo: {
         marginLeft: '9%',
         lineHeight: 1.5,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             margin: '10px 0',
             lineHeight: 1.75
         }
@@ -62,7 +62,7 @@ const styleSheet = theme => ({
         marginTop: 120,
         paddingTop: 40,
         borderTop: `2px solid ${theme.palette.secondaryColor}`,
-        [theme.breakpoints.down('sm')]:{
+        [theme.breakpoints.down('xs')]:{
             margin: 0,
             border: 'none'
         }
@@ -76,7 +76,7 @@ const styleSheet = theme => ({
         borderColor: theme.palette.primaryColor,
         transform: 'rotate(-45deg)',
         marginRight: 25,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             display: 'none'
         }
     },
@@ -89,13 +89,13 @@ const styleSheet = theme => ({
         borderColor: theme.palette.primaryColor,
         transform: 'rotate(135deg)',
         marginLeft: 25,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             display: 'none'
         }
     },
     prevLinkButton: {
         visibility: ({ prevPage }) => prevPage ? 'visible' : 'hidden',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             textAlign: 'center',
             boxSizing: 'border-box',
             borderRight: `2px solid ${theme.palette.primaryColor}`,
@@ -104,7 +104,7 @@ const styleSheet = theme => ({
     },
     nextLinkButton: {
         visibility: ({ nextPage }) => nextPage ? 'visible' : 'hidden',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             textAlign: 'center',
             boxSizing: 'border-box',
             width: '50%',
@@ -122,7 +122,7 @@ const styleSheet = theme => ({
         '&:hover': {
             color: theme.palette.black
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             fontSize: '1em',
             textAlign: 'center',
             padding: '0 1.1em',
@@ -133,7 +133,7 @@ const styleSheet = theme => ({
         fontWeight: 300,
         color: theme.palette.primaryColor,
         marginTop: 15,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             margin: 0,
             borderBottom: `1px solid ${theme.palette.secondaryColor}`,
             padding: '1.5em 2.5em',
@@ -152,7 +152,7 @@ const branchProp = branch(
 
 const Work = ({
     classes, workType, workData
-    }) => {
+}) => {
 
     const work = workData[workType];
     const isMobile = window.innerWidth < 600;
