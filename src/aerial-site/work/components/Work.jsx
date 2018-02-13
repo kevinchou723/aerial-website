@@ -11,8 +11,11 @@ import { pageNames, pageTitles } from '../constants';
 
 const styleSheet = theme => ({
     topSection:{
-        margin: '0 20px 5% 20px',
+        margin: '0 0 5% 0',
         color: theme.palette.primaryColor,
+        [theme.breakpoints.down('sm')]: {
+            margin: '0 20px 5% 20px'
+        },
         [theme.breakpoints.down('xs')]:{
             padding: '0 2.5em'
         }

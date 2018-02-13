@@ -32,14 +32,18 @@ const styleSheet = theme => ({
     },
     firstSection: {
         display: 'inline-block',
-        marginLeft: 10
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: 10
+        }
     },
     secondSection: {
         display: 'inline-block',
-        marginRight: 10,
         float: 'right',
         '& :last-child': {
             margin: 0
+        },
+        [theme.breakpoints.down('sm')]: {
+            marginRight: 10
         }
     }
 });
