@@ -1,7 +1,7 @@
 export default {
     'fab-holiday': {
         title: 'First Aid Beauty - 2017 Holiday Kits',
-        description: 'To celebrate the holiday season, First Aid Beauty designs limited edition kits featuring their top sellings products to tackle your specific skin needs. The theme this year is inspired by Fairytale Books.',
+        description: 'To celebrate the holiday season, First Aid Beauty designs limited edition kits featuring their top-selling products to tackle your specific skin needs. The theme this year is inspired by Fairytale Books.',
         client: 'First Aid Beauty',
         designAgency: 'Adler Design',
         creativeDirection: 'Deborah Adler',
