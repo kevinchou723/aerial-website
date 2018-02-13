@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
@@ -83,14 +82,6 @@ const Grid = ({ classes, images, isMobile, containerWidth }) => {
             </GridList>
         </div>
     );
-}
-
-Grid.propTypes = {
-
-}
-
-Grid.defaultProps = {
-
 }
 
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
@@ -21,14 +20,6 @@ const Panel = ({
             { children }
         </div>
     );
-
-Panel.propTypes = {
-
-}
-
-Panel.defaultProps = {
-
-}
 
 
 export default compose(

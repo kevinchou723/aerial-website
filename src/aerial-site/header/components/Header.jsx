@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import withHandlers from 'recompose/withHandlers';
 import injectSheet from 'react-jss';
 import pure from 'recompose/pure';
@@ -40,8 +39,10 @@ const styleSheet = theme => ({
         }
     },
     firstSection: {
+        marginLeft: 10
     },
     secondSection: {
+        marginRight: 10,
         '& :last-child': {
             margin: 0
         },
@@ -66,24 +67,27 @@ const styleSheet = theme => ({
 });
 
 const handlers = withHandlers({
-    handleClick: ({ isMobileMenuOpen, setMobileMenuOpen }) => event => setMobileMenuOpen(!isMobileMenuOpen)
+    handleClick: ({ isMobileMenuOpen, setMobileMenuOpen }) => event => setMobileMenuOpen(!isMobileMenuOpen),
+    handleHomeClick: ({ isMobileMenuOpen, setMobileMenuOpen }) => event => {
+        isMobileMenuOpen && setMobileMenuOpen(false);
+    }
 });
 
 const Header = ({
-    classes, isMobileMenuOpen, handleClick
+    classes, isMobileMenuOpen, handleClick, handleHomeClick
 }) => (
     <Headroom disable={isMobileMenuOpen} className={classes.headRoom}>
         <div className={classes.headerContainer}>
             <div className={classes.headerWrapper}>
                 <div className={classes.firstSection}>
-                    <Link className={classes.headerLinks} to="/"> Aerial Chen </Link>
+                    <Link className={classes.headerLinks} to="/" onClick={handleHomeClick}> Aerial Chen </Link>
                 </div>
                 <div className={classes.secondSection}>
                     <Link className={classes.headerLinks} to="/"> Work </Link>
                     <Link className={classes.headerLinks} to="/about"> About </Link>
                 </div>
                 <div className={classes.mobileSection}>
-                        <MenuButton isMenuOpen={isMobileMenuOpen} onClick={handleClick} />
+                    <MenuButton isMenuOpen={isMobileMenuOpen} onClick={handleClick} />
                 </div>
             </div>
         </div>
@@ -100,15 +104,6 @@ const MenuButton = injectSheet(styleSheet)(({
         />
     )
 });
-
-Header.propTypes = {
-
-}
-
-Header.defaultProps = {
-
-}
-
 
 export default compose(
     handlers,

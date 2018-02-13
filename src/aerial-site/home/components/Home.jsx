@@ -2,6 +2,7 @@ import React from 'react';
 import injectSheet from 'react-jss';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
+import lifecycle from 'recompose/lifecycle';
 import { Panel } from '../../common';
 import Flexbox from 'flexbox-react';
 import { Link } from 'react-router-dom';
@@ -37,7 +38,7 @@ const styleSheet = theme => ({
         }
     },
     flexSquare: {
-        padding: '10px auto',
+        margin: '0 10px',
         '& img': {
             maxWidth: 490,
             maxHeight: 490
@@ -47,7 +48,7 @@ const styleSheet = theme => ({
         }
     },
     flexSmallRec:{
-        padding: '10px auto',
+        margin: '0 10px',
         '& img': {
             maxWidth: 490,
         }
@@ -89,8 +90,9 @@ const MobileHomeGrid = injectSheet(styleSheet)(({
             {
                 pageNames.map((pageName) => {
                     return (
-                        <Flexbox className={classes.flexSquare}>
+                        <Flexbox key={pageName} className={classes.flexSquare}>
                             <ImageBox
+                                key={pageName}
                                 to={`/${pageName}`}
                                 imgSrc={workData[pageName].mobileProfileImg}
                                 title={workData[pageName].title}
@@ -206,10 +208,10 @@ const DesktopHomeGrid = injectSheet(styleSheet)(({
 });
 
 const ImageBox = injectSheet(styleSheet)(({
-    classes, to, imgSrc, title
+    classes, to, imgSrc, title, key
 }) => {
     return (
-        <Link className={classes.linkBox} to={to}>
+        <Link className={classes.linkBox} to={to} key={key}>
             <div className={classes.imgWrapper}>
                 <img alt='img' className={classes.image} src={imgSrc} />
             </div>
@@ -218,7 +220,17 @@ const ImageBox = injectSheet(styleSheet)(({
     );
 });
 
+const onProps = {
+    componentWillReceiveProps: (nextProps) => {
+        if (window.pageYOffset !== 0) window.scroll(0, 0);
+    },
+    componentDidMount: () => {
+        if (window.pageYOffset !== 0) window.scroll(0, 0);
+    }
+}
+
 export default compose(
     injectSheet(styleSheet),
+    lifecycle(onProps),
     pure
 )(Home);

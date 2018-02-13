@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
@@ -12,7 +11,7 @@ import { pageNames, pageTitles } from '../constants';
 
 const styleSheet = theme => ({
     topSection:{
-        marginBottom: '5%',
+        margin: '0 20px 5% 20px',
         color: theme.palette.primaryColor,
         [theme.breakpoints.down('xs')]:{
             padding: '0 2.5em'
@@ -76,6 +75,9 @@ const styleSheet = theme => ({
         borderColor: theme.palette.primaryColor,
         transform: 'rotate(-45deg)',
         marginRight: 25,
+        [theme.breakpoints.down('sm')]: {
+            verticalAlign: 'middle'
+        },
         [theme.breakpoints.down('xs')]: {
             display: 'none'
         }
@@ -89,25 +91,30 @@ const styleSheet = theme => ({
         borderColor: theme.palette.primaryColor,
         transform: 'rotate(135deg)',
         marginLeft: 25,
+        [theme.breakpoints.down('sm')]: {
+            verticalAlign: 'middle'
+        },
         [theme.breakpoints.down('xs')]: {
             display: 'none'
         }
     },
     prevLinkButton: {
         visibility: ({ prevPage }) => prevPage ? 'visible' : 'hidden',
+        width: '50%',
+        textAlign: 'left',
         [theme.breakpoints.down('xs')]: {
             textAlign: 'center',
             boxSizing: 'border-box',
-            borderRight: `2px solid ${theme.palette.primaryColor}`,
-            width: '50%'
+            borderRight: `2px solid ${theme.palette.primaryColor}`
         }
     },
     nextLinkButton: {
         visibility: ({ nextPage }) => nextPage ? 'visible' : 'hidden',
+        width: '50%',
+        textAlign: 'right',
         [theme.breakpoints.down('xs')]: {
             textAlign: 'center',
             boxSizing: 'border-box',
-            width: '50%',
             borderLeft: ({ prevPage }) => {
                 return prevPage ? 'none' : `2px solid ${theme.palette.primaryColor}`;
             }
@@ -121,6 +128,10 @@ const styleSheet = theme => ({
         color: theme.palette.primaryColor,
         '&:hover': {
             color: theme.palette.black
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '75%',
+            verticalAlign: 'middle'
         },
         [theme.breakpoints.down('xs')]: {
             fontSize: '1em',
@@ -144,7 +155,7 @@ const styleSheet = theme => ({
 
 const branchProp = branch(
     ({ workType, workData }) => {
-        return workType != '' && workData[workType] != undefined
+        return workType !== '' && workData[workType] !== undefined
     },
     Work => Work,
     renderNothing
@@ -213,14 +224,6 @@ const Navigation = injectSheet(styleSheet)(({
     );
 })
 
-
-Work.propTypes = {
-
-}
-
-Work.defaultProps = {
-
-}
 
 const onProps = {
     componentWillReceiveProps: (nextProps) => {

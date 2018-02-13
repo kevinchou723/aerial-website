@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
@@ -37,7 +36,9 @@ const styleSheet = theme => ({
         color: theme.palette.white,
         fontWeight: 600,
         fontSize: '1.75em',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        width: '100%',
+        display: 'block'
     },
     email: {
         textDecoration: 'none',
@@ -79,21 +80,12 @@ const MobileMenu = ({
                     </div>
                 </div>
                 <div className={classes.contentLast}>
-                    <a className={classes.sectionTitle} onClick={handleClick} href="https://www.linkedin.com/in/aerialchen" target="_blank"> LinkedIn </a>
+                    <a className={classes.sectionTitle} onClick={handleClick} href="https://www.linkedin.com/in/aerialchen" target="_blank" rel="noopener noreferrer"> LinkedIn </a>
                 </div>
             </div>
         </div>
     );
 };
-
-
-MobileMenu.propTypes = {
-
-}
-
-MobileMenu.defaultProps = {
-
-}
 
 export default compose(
     handlers,

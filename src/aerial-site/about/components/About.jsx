@@ -149,7 +149,7 @@ const About = ({
                             </div>
                         </div>
                         <div className={classes.linkedinWrapper}>
-                            <a className={classes.sectionTitle} href="https://www.linkedin.com/in/aerialchen" target="_blank"> LinkedIn </a>
+                            <a className={classes.sectionTitle} href="https://www.linkedin.com/in/aerialchen" target="_blank" rel="noopener noreferrer"> LinkedIn </a>
                         </div>
                         <div className={classes.siteByWrapper}>
                             <p className={classes.site}>Site:</p>

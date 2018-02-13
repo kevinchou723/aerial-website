@@ -31,10 +31,12 @@ const styleSheet = theme => ({
         }
     },
     firstSection: {
-        display: 'inline-block'
+        display: 'inline-block',
+        marginLeft: 10
     },
     secondSection: {
         display: 'inline-block',
+        marginRight: 10,
         float: 'right',
         '& :last-child': {
             margin: 0
@@ -52,7 +54,7 @@ const Footer = ({
                 </div>
                 <div className={classes.secondSection}>
                     <a className={classes.footerLinks} href="mailto:aerialah@gmail.com"> contact </a>
-                    <a className={classes.footerLinks} href="https://www.linkedin.com/in/aerialchen" target="_blank"> linkedin </a>
+                    <a className={classes.footerLinks} href="https://www.linkedin.com/in/aerialchen" target="_blank" rel="noopener noreferrer"> linkedin </a>
                 </div>
             </div>
         </div>
