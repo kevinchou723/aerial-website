@@ -108,7 +108,15 @@ const styleSheet = theme => ({
     by:{
         fontSize: '1em',
         fontWeight: 300,
-        marginTop: '0.25em'
+        marginTop: '0.25em',
+        '& a': {
+            textDecoration: 'none',
+            fontWeight: 700,
+            color: theme.palette.primaryColor,
+            '&:hover': {
+                color: theme.palette.black
+            }
+        }
     }
 });
 
@@ -152,8 +160,8 @@ const About = ({
                         </div>
                         <div className={classes.siteByWrapper}>
                             <p className={classes.site}>Site:</p>
-                            <p className={classes.by}>Designed by Aerial Chen</p>
-                            <p className={classes.by}>Developed by Kevin Chou</p>
+                            <p className={classes.by}>Designed by <a href="https://www.instagram.com/obedesign" target="_blank" rel="noopener noreferrer">Aerial Chen</a></p>
+                            <p className={classes.by}>Developed by <a href="https://www.linkedin.com/in/kevinchou723" target="_blank" rel="noopener noreferrer">Kevin Chou</a></p>
                         </div>
                     </div>
                 </div>
