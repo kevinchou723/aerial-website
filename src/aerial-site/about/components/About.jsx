@@ -134,9 +134,8 @@ const About = ({
                         She previously worked at the multidisciplinary studio Adler Design
                         following graduation from the School of Visual Arts.  Aerial’s work is designed to
                         delight, whilst educating and forming meaningful connections and experiences.
-                        When Aerial is away from her keyboard, she enjoys letting her mind wander and
-                        observing the minutiae of everyday life, with a pencil in one hand and a sketchbook in
-                        the other.
+                        When Aerial is away from her keyboard, she enjoys observing the minutiae of everyday life, 
+                        with a pencil in one hand and a sketchbook in the other.
                     </p>
                     </div>
                     <div className={classes.bottomRight}>
