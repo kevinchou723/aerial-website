@@ -84,6 +84,9 @@ const styleSheet = theme => ({
             borderTop: `1px solid ${theme.palette.primaryColor}`
         }
     },
+    contactSectionWrapper:{
+        marginBottom: '0.25em'
+    },
     linkedinWrapper:{
         padding: '2em 0',
         borderStyle: 'solid',
@@ -92,6 +95,7 @@ const styleSheet = theme => ({
     },
     siteByWrapper:{
         paddingTop: '2em',
+        lineHeight: '1.25em',
         [theme.breakpoints.between('sm', 'sm')]: {
             lineHeight: '1.2em'
         }
@@ -175,7 +179,7 @@ const About = ({
                     </div>
                     <div className={classes.bottomRight}>
                         <div className={classes.contactWrapper}>
-                            <div>
+                            <div className={classes.contactSectionWrapper}>
                                 <a className={classes.sectionTitle} href="mailto:aerialah@gmail.com"> Contact </a>
                             </div>
                             <div>
