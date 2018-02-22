@@ -10,6 +10,9 @@ const styleSheet = theme => ({
     },
     topSection:{
         margin: '1em 0',
+        [theme.breakpoints.between('sm', 'sm')]: {
+            margin: '1em 3em'
+        },
         [theme.breakpoints.down('xs')]: {
             padding: '0 2.5em'
         }
@@ -37,6 +40,9 @@ const styleSheet = theme => ({
     bottomSection: {
         margin: '2em 0',
         display: 'flex',
+        [theme.breakpoints.between('sm', 'sm')]: {
+            margin: '2em 3em'
+        },
         [theme.breakpoints.down('xs')]: {
             padding: '0 2.5em',
             flexDirection: 'column'
@@ -52,6 +58,9 @@ const styleSheet = theme => ({
         fontWeight: 300,
         fontSize: '1.8em',
         lineHeight: '1.6em',
+        [theme.breakpoints.between('sm', 'sm')]: {
+            fontSize: '1.5em'
+        },
         [theme.breakpoints.down('xs')]: {
             fontSize: '1.2em'
         }
@@ -66,6 +75,9 @@ const styleSheet = theme => ({
     },
     contactWrapper:{
         paddingBottom: '2em',
+        [theme.breakpoints.between('sm', 'sm')]: {
+            lineHeight: '1.75em'
+        },
         [theme.breakpoints.down('xs')]: {
             marginTop: '2em',
             padding: '2em 0',
@@ -79,7 +91,10 @@ const styleSheet = theme => ({
         borderWidth: '1px 0'
     },
     siteByWrapper:{
-        paddingTop: '2em'
+        paddingTop: '2em',
+        [theme.breakpoints.between('sm', 'sm')]: {
+            lineHeight: '1.2em'
+        }
     },
     sectionTitle:{
         textDecoration: 'none',
@@ -89,6 +104,9 @@ const styleSheet = theme => ({
         '&:hover': {
             color: theme.palette.black
         },
+        [theme.breakpoints.between('sm', 'sm')]: {
+            fontSize: '1.75em'
+        },
         [theme.breakpoints.down('xs')]: {
             fontSize: '1.75em'
         }
@@ -97,13 +115,19 @@ const styleSheet = theme => ({
         textDecoration: 'none',
         color: theme.palette.primaryColor,
         fontSize: '1.25em',
+        [theme.breakpoints.between('sm', 'sm')]: {
+            fontSize: '0.95em'
+        },
         '&:hover': {
             color: theme.palette.black
         }
     },
     site:{
         fontSize: '1em',
-        fontWeight: '700'
+        fontWeight: '700',
+        [theme.breakpoints.between('sm', 'sm')]: {
+            fontSize: '0.95em'
+        },
     },
     by:{
         fontSize: '1em',
@@ -116,7 +140,10 @@ const styleSheet = theme => ({
             '&:hover': {
                 color: theme.palette.black
             }
-        }
+        },
+        [theme.breakpoints.between('sm', 'sm')]: {
+            fontSize: '0.76em'
+        },
     }
 });
 

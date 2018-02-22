@@ -13,7 +13,7 @@ const styleSheet = theme => ({
     topSection:{
         margin: '0 0 5% 0',
         color: theme.palette.primaryColor,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.between('sm','sm')]: {
             margin: '0 20px 5% 20px'
         },
         [theme.breakpoints.down('xs')]:{
@@ -78,7 +78,7 @@ const styleSheet = theme => ({
         borderColor: theme.palette.primaryColor,
         transform: 'rotate(-45deg)',
         marginRight: 25,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.between('sm','sm')]: {
             verticalAlign: 'middle'
         },
         [theme.breakpoints.down('xs')]: {
@@ -94,7 +94,7 @@ const styleSheet = theme => ({
         borderColor: theme.palette.primaryColor,
         transform: 'rotate(135deg)',
         marginLeft: 25,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.between('sm','sm')]: {
             verticalAlign: 'middle'
         },
         [theme.breakpoints.down('xs')]: {
@@ -132,7 +132,7 @@ const styleSheet = theme => ({
         '&:hover': {
             color: theme.palette.black
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.between('sm','sm')]: {
             width: '75%',
             verticalAlign: 'middle'
         },

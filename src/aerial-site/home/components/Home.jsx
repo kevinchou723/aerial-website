@@ -44,7 +44,8 @@ const styleSheet = theme => ({
             maxHeight: 490
         },
         [theme.breakpoints.down('xs')]: {
-            padding: 0
+            padding: 0,
+            margin: 0
         }
     },
     flexSmallRec:{

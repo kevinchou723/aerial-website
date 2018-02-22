@@ -39,16 +39,16 @@ const styleSheet = theme => ({
         }
     },
     firstSection: {
-        [theme.breakpoints.down('sm')]: {
-            marginLeft: 10
+        [theme.breakpoints.between('sm','sm')]: {
+            marginLeft: '3em'
         }
     },
     secondSection: {
         '& :last-child': {
             margin: 0
         },
-        [theme.breakpoints.down('sm')]: {
-            marginRight: 10
+        [theme.breakpoints.between('sm','sm')]: {
+            marginRight: '3em'
         },
         [theme.breakpoints.down('xs')]:{
             display: 'none'
