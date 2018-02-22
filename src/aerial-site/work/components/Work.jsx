@@ -14,7 +14,7 @@ const styleSheet = theme => ({
         margin: '0 0 5% 0',
         color: theme.palette.primaryColor,
         [theme.breakpoints.between('sm','sm')]: {
-            margin: '0 20px 5% 20px'
+            margin: '0 3em 5% 3em'
         },
         [theme.breakpoints.down('xs')]:{
             padding: '0 2.5em'
@@ -105,6 +105,9 @@ const styleSheet = theme => ({
         visibility: ({ prevPage }) => prevPage ? 'visible' : 'hidden',
         width: '50%',
         textAlign: 'left',
+        [theme.breakpoints.between('sm','sm')]: {
+            paddingLeft: '3em'
+        },
         [theme.breakpoints.down('xs')]: {
             textAlign: 'center',
             boxSizing: 'border-box',
@@ -115,6 +118,9 @@ const styleSheet = theme => ({
         visibility: ({ nextPage }) => nextPage ? 'visible' : 'hidden',
         width: '50%',
         textAlign: 'right',
+        [theme.breakpoints.between('sm', 'sm')]: {
+            paddingRight: '3em'
+        },
         [theme.breakpoints.down('xs')]: {
             textAlign: 'center',
             boxSizing: 'border-box',
