@@ -48,8 +48,8 @@ const styleSheet = theme => ({
 });
 
 const branchProp = branch(
-    ({ isMobileMenuOpen }) => {
-        return window.innerWidth <= 600 && isMobileMenuOpen
+    ({ isMobileMenuOpen, theme, width }) => {
+        return width <= theme.breakpoints.values.sm && isMobileMenuOpen
     },
     MobileMenu => MobileMenu,
     renderNothing

@@ -8,9 +8,14 @@ import Flexbox from 'flexbox-react';
 import { Link } from 'react-router-dom';
 import { pageNames } from '../../work/constants';
 
+import windowDimensions from 'react-window-dimensions';
+
 const styleSheet = theme => ({
     mainFlexBox:{
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        [theme.breakpoints.down('xs')]: {
+            justifyContent: 'center'
+        }
     },
     linkBox:{
         textDecoration: 'none',
@@ -70,10 +75,9 @@ const styleSheet = theme => ({
     },
 });
 
-const Home = ({
-    classes, workData
-}) => {
-    const isMobile = window.innerWidth <= 600;
+const Home = ({classes, workData, theme, width}) => {
+    
+    const isMobile = width <= theme.breakpoints.values.sm;
     return (
         <Panel>
             <Flexbox className={classes.mainFlexBox}>
@@ -234,4 +238,4 @@ export default compose(
     injectSheet(styleSheet),
     lifecycle(onProps),
     pure
-)(Home);
+)(windowDimensions()(Home));

@@ -9,6 +9,8 @@ import { Panel, Grid } from '../../common';
 import renderNothing from 'recompose/renderNothing';
 import { pageNames, pageTitles } from '../constants';
 
+import windowDimensions from 'react-window-dimensions';
+
 const styleSheet = theme => ({
     topSection:{
         margin: '0 0 5% 0',
@@ -171,11 +173,10 @@ const branchProp = branch(
 );
 
 const Work = ({
-    classes, workType, workData
+    classes, workType, workData, theme, width
 }) => {
-
     const work = workData[workType];
-    const isMobile = window.innerWidth < 600;
+    const isMobile = width <= theme.breakpoints.values.sm;
     const currentIndex = pageNames.findIndex((nav) => nav === workType);
     const prevPage = pageNames[currentIndex - 1];
     const nextPage = pageNames[currentIndex + 1];
@@ -248,4 +249,4 @@ export default compose(
     branchProp,
     lifecycle(onProps),
     pure
-)(Work);
+)(windowDimensions()(Work));

@@ -4,6 +4,8 @@ import {
     setMobileMenuOpen
 } from '../../home/actions';
 
+import windowDimensions from 'react-window-dimensions';
+
 const mapStateToProps = state => {
     return {
         isMobileMenuOpen: state.home.isMobileMenuOpen
@@ -16,4 +18,7 @@ const mapDispatchToProps = (dispatch) => ({
     }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(MobileMenu);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(windowDimensions()(MobileMenu));
