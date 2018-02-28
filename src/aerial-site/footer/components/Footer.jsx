@@ -65,6 +65,6 @@ const Footer = ({
     );
 
 export default compose(
+    pure,
     injectSheet(styleSheet),
-    pure
 )(Footer);

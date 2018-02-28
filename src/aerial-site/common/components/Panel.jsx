@@ -23,6 +23,6 @@ const Panel = ({
 
 
 export default compose(
+    pure,
     injectSheet(styleSheet),
-    pure
 )(Panel);

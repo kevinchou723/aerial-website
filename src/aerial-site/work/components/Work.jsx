@@ -188,7 +188,7 @@ const Work = ({
                 <Info work={work}/>
             </div>
             <Grid images={images} isMobile={isMobile}/>
-            {work.subNote && <p className={classes.subNote}>{work.subNote}</p>}
+            { work.subNote && <p className={classes.subNote}>{work.subNote}</p> }
             <Navigation nextPage={nextPage} prevPage={prevPage}/>
         </Panel>
     );
@@ -245,8 +245,8 @@ const onProps = {
 }
 
 export default compose(
-    injectSheet(styleSheet),
-    branchProp,
     lifecycle(onProps),
-    pure
+    pure,
+    branchProp,
+    injectSheet(styleSheet),
 )(windowDimensions()(Work));

@@ -86,6 +86,6 @@ const Grid = ({ classes, images, isMobile, containerWidth }) => {
 
 
 export default compose(
+    pure,
     injectSheet(styleSheet),
-    pure
 )(Dimensions()(Grid));

@@ -235,7 +235,7 @@ const onProps = {
 }
 
 export default compose(
-    injectSheet(styleSheet),
     lifecycle(onProps),
-    pure
+    pure,
+    injectSheet(styleSheet),
 )(windowDimensions()(Home));

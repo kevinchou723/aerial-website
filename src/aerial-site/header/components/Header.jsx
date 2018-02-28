@@ -111,6 +111,6 @@ const MenuButton = injectSheet(styleSheet)(({
 
 export default compose(
     handlers,
+    pure,
     injectSheet(styleSheet),
-    pure
 )(Header);

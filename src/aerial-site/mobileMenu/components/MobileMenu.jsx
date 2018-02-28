@@ -48,8 +48,8 @@ const styleSheet = theme => ({
 });
 
 const branchProp = branch(
-    ({ isMobileMenuOpen, theme, width }) => {
-        return width <= theme.breakpoints.values.sm && isMobileMenuOpen
+    ({ isMobileMenuOpen, width }) => {
+        return width <= 600 && isMobileMenuOpen;
     },
     MobileMenu => MobileMenu,
     renderNothing
@@ -89,7 +89,7 @@ const MobileMenu = ({
 
 export default compose(
     handlers,
-    injectSheet(styleSheet),
+    pure,
     branchProp,
-    pure
+    injectSheet(styleSheet),
 )(MobileMenu);
