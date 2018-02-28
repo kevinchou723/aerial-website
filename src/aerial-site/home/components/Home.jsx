@@ -218,7 +218,7 @@ const ImageBox = injectSheet(styleSheet)(({
     return (
         <Link className={classes.linkBox} to={to} key={key}>
             <div className={classes.imgWrapper}>
-                <img alt='img' className={classes.image} src={imgSrc} />
+                <img alt={`${title} image`} className={classes.image} src={imgSrc} />
             </div>
             <p className={classes.imgTitle}>{title}</p>
         </Link>
