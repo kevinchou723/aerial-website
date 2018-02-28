@@ -11,13 +11,16 @@ import { pageNames } from '../../work/constants';
 import windowDimensions from 'react-window-dimensions';
 
 const styleSheet = theme => ({
+    seoHeader: {
+        display: 'none'
+    },
     mainFlexBox:{
         justifyContent: 'space-between',
         [theme.breakpoints.down('xs')]: {
             justifyContent: 'center'
         }
     },
-    linkBox:{
+    linkBox: {
         textDecoration: 'none',
         color: theme.palette.primaryColor,
         '&:hover':{
@@ -29,7 +32,7 @@ const styleSheet = theme => ({
         width: "100%",
         height: '100%'
     },
-    imgTitle:{
+    imgTitle: {
         minHeight: 35,
         display: 'flex',
         alignItems: 'flex-start',
@@ -53,13 +56,13 @@ const styleSheet = theme => ({
             margin: 0
         }
     },
-    flexSmallRec:{
+    flexSmallRec: {
         margin: '0 10px',
         '& img': {
             maxWidth: 490,
         }
     },
-    flexSmSqLeft:{
+    flexSmSqLeft: {
         paddingRight: 10,
         '& img': {
             maxWidth: 235,
@@ -80,6 +83,7 @@ const Home = ({classes, workData, theme, width}) => {
     const isMobile = width <= theme.breakpoints.values.sm;
     return (
         <Panel>
+            <h1 className={classes.seoHeader}>Aerial Chen Portfolio Site</h1>
             <Flexbox className={classes.mainFlexBox}>
                 {isMobile ? <MobileHomeGrid workData={workData} /> : <DesktopHomeGrid workData={workData}/> }
             </Flexbox>
