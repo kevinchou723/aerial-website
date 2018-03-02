@@ -237,7 +237,7 @@ const Navigation = injectSheet(styleSheet)(({
 
 const onProps = {
     componentWillReceiveProps: (nextProps) => {
-        if (window.pageYOffset !== 0) window.scroll(0, 0);
+        // if (window.pageYOffset !== 0) window.scroll(0, 0);
     },
     componentDidMount: () => {
         if (window.pageYOffset !== 0) window.scroll(0, 0);
