@@ -80,6 +80,30 @@ export default {
         profileImg: '/assets/img/work/hp/hp-3.jpg',
         mobileProfileImg: '/assets/img/work/hp/m-hp-3.jpg'
     },
+    'fab-webredesign': {
+        title: 'First Aid Beauty - Website Redesign',
+        description: 'The concept behind First Aid Beauty’s new website is to emphasize the brand’s mission and values such as being approachable, direct, witty and fun. This is translated through the use of playful yet informative photography, tone of voice and graphical elements.',
+        client: 'First Aid Beauty',
+        digitalAgency: 'Sweden Unlimited',
+        designAgency: 'Adler Design*',
+        creativeDirection: 'Deborah Adler',
+        role: 'Designer',
+        subNote: '*Adler Design provided creative direction and brand assets to support the redesign.',
+        images: [
+            { src: '/assets/img/work/fab-webredesign/fab-webredesign-1.jpg', rows: 2.3, cols: 4 },
+            { src: '/assets/img/work/fab-webredesign/fab-webredesign-2.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/fab-webredesign/fab-webredesign-3.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/fab-webredesign/fab-webredesign-4.jpg', rows: 2.3, cols: 4 }
+        ],
+        mobileImages: [
+            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-1.jpg' },
+            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-2.jpg' },
+            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-3.jpg' },
+            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-4.jpg' }
+        ],
+        profileImg: '/assets/img/work/hp/hp-5.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-5.jpg'
+    },
     'fab-printad': {
         title: 'First Aid Beauty - Print Ad',
         description: 'Ultra Repair Cream is First Aid Beauty’s top-selling product. It is a gentle yet effective moisturizer that is safe for even the most sensitive skin. The buoy and water emphasizes instant hydration and relief upon application.',
@@ -95,30 +119,6 @@ export default {
         ],
         profileImg: '/assets/img/work/hp/hp-4.jpg',
         mobileProfileImg: '/assets/img/work/hp/m-hp-4.jpg'
-    },
-    'fab-webredesign': {
-        title: 'First Aid Beauty - Website Redesign',
-        description: 'The concept behind First Aid Beauty’s new website is to emphasize the brand’s mission and values such as being approachable, direct, witty and fun. This is translated through the use of playful yet informative photography, tone of voice and graphical elements.',
-        client: 'First Aid Beauty',
-        digitalAgency: 'Sweden Unlimited',
-        designAgency: 'Adler Design*',
-        creativeDirection: 'Deborah Adler',
-        role: 'Designer',
-        subNote: '*Adler Design provided creative direction and brand assets to support the redesign.',
-        images: [
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-1.jpg', rows: 2.3, cols: 4  },
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-2.jpg', rows: 2, cols: 2  },
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-3.jpg', rows: 2, cols: 2  },
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-4.jpg', rows: 2.3, cols: 4  }
-        ],
-        mobileImages: [
-            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-1.jpg' },
-            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-2.jpg' },
-            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-3.jpg' },
-            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-4.jpg' }
-        ],
-        profileImg: '/assets/img/work/hp/hp-5.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-5.jpg'
     },
     'fab-collection': {
         title: 'First Aid Beauty - Collection',
@@ -275,8 +275,8 @@ export default {
             { src: '/assets/img/work/ad-holiday/ad-holiday-1.gif', rows: 1.25},
             { src: '/assets/img/work/ad-holiday/ad-holiday-2.gif', rows: 1.25},
         ],
-        profileImg: '/assets/img/work/hp/hp-10.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-10.jpg'
+        profileImg: '/assets/img/work/hp/hp-10.gif',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-10.gif'
     },
     'aiga': {
         title: 'AIGA Women Lead Initiative',

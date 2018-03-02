@@ -3,7 +3,6 @@ import injectSheet from 'react-jss';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
 import lifecycle from 'recompose/lifecycle';
-import { Panel } from '../../common';
 import Flexbox from 'flexbox-react';
 import { Link } from 'react-router-dom';
 import { pageNames } from '../../work/constants';
@@ -11,6 +10,46 @@ import { pageNames } from '../../work/constants';
 import windowDimensions from 'react-window-dimensions';
 
 const styleSheet = theme => ({
+    homePanel: {
+        margin: '3em auto',
+        maxWidth: 1000,
+        [theme.breakpoints.down('xs')]: {
+            margin: '1em auto 2em auto'
+        }
+    },
+    topHomeContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginBottom: '5em',
+        [theme.breakpoints.down('xs')]: {
+            margin: '1em auto 3em auto'
+        }
+
+    },
+    aerialLogo: {
+        width: '15%',
+        [theme.breakpoints.down('xs')]: {
+            width: '35%',
+        }
+    },
+    mainTitle: {
+        fontSize: '2.5em'
+    },
+    description: {
+        margin: '1em 7em',
+        fontSize: '1.25em',
+        fontWeight: 300,
+        lineHeight: 1.5,
+        textAlign: 'center',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '1em',
+            margin: '1em 2.5em',
+        }
+    },
+    hashTag: {
+        fontWeight: 'bold'
+    },
     mainFlexBox:{
         justifyContent: 'space-between',
         [theme.breakpoints.down('xs')]: {
@@ -79,11 +118,20 @@ const Home = ({classes, workData, theme, width}) => {
     
     const isMobile = width <= theme.breakpoints.values.sm;
     return (
-        <Panel>
+        <div className={classes.homePanel}>
+            <div className={classes.topHomeContainer}>
+                <img className={classes.aerialLogo} src='../../../../assets/img/ac-logo.svg' alt='ac-logo'/>
+                <h1 className={classes.mainTitle}>AERIAL CHEN</h1>
+                <p className={classes.description}>
+                    Commited to transforming shapes, letterforms and colors into impactful, 
+                    meaningful, educational, delightful, and wonderfully eye-opening experiences.
+                </p>
+                <p className={classes.hashTag}>#creator-thinker-maker-doer</p>
+            </div>
             <Flexbox className={classes.mainFlexBox}>
                 {isMobile ? <MobileHomeGrid workData={workData} /> : <DesktopHomeGrid workData={workData}/> }
             </Flexbox>
-        </Panel>
+        </div>
     );
 };
 
@@ -132,9 +180,9 @@ const DesktopHomeGrid = injectSheet(styleSheet)(({
                 </Flexbox>
                 <Flexbox className={classes.flexSquare}>
                     <ImageBox
-                        to='/fab-webredesign'
-                        imgSrc={workData['fab-webredesign'].profileImg}
-                        title={workData['fab-webredesign'].title}
+                        to='/fab-printad'
+                        imgSrc={workData['fab-printad'].profileImg}
+                        title={workData['fab-printad'].title}
                     />
                 </Flexbox>
                 <Flexbox className={classes.flexSquare}>
@@ -172,9 +220,9 @@ const DesktopHomeGrid = injectSheet(styleSheet)(({
                 </Flexbox>
                 <Flexbox className={classes.flexSquare}>
                     <ImageBox
-                        to='/fab-printad'
-                        imgSrc={workData['fab-printad'].profileImg}
-                        title={workData['fab-printad'].title}
+                        to='/fab-webredesign'
+                        imgSrc={workData['fab-webredesign'].profileImg}
+                        title={workData['fab-webredesign'].title}
                     />
                 </Flexbox>
                 <Flexbox className={classes.flexSquare}>
@@ -218,7 +266,7 @@ const ImageBox = injectSheet(styleSheet)(({
     return (
         <Link className={classes.linkBox} to={to} key={key}>
             <div className={classes.imgWrapper}>
-                <img alt={`${title} image`} className={classes.image} src={imgSrc} />
+                <img alt={`${title}`} className={classes.image} src={imgSrc} />
             </div>
             <p className={classes.imgTitle}>{title}</p>
         </Link>
@@ -234,8 +282,8 @@ const onProps = {
     }
 }
 
-export default compose(
+export default windowDimensions()(compose(
     lifecycle(onProps),
     pure,
     injectSheet(styleSheet),
-)(windowDimensions()(Home));
+)(Home));

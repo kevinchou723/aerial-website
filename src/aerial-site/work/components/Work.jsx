@@ -63,8 +63,8 @@ const styleSheet = theme => ({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: 120,
-        paddingTop: 40,
+        marginTop: '3em',
+        padding: '3em 0',
         borderTop: `2px solid ${theme.palette.secondaryColor}`,
         [theme.breakpoints.down('xs')]:{
             margin: 0,
@@ -244,9 +244,9 @@ const onProps = {
     }
 }
 
-export default compose(
+export default windowDimensions()(compose(
     lifecycle(onProps),
     pure,
     branchProp,
     injectSheet(styleSheet),
-)(windowDimensions()(Work));
+)(Work));
