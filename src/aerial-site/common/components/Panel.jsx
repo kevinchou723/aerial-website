@@ -8,7 +8,7 @@ const styleSheet = theme => ({
         margin: '5em auto 0 auto',
         maxWidth: 1000,
         [theme.breakpoints.down('xs')]:{
-            margin: '2em auto'
+            margin: '2em auto 0 auto'
         }
     }
 });
