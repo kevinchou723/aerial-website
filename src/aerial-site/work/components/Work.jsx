@@ -103,32 +103,42 @@ const styleSheet = theme => ({
             display: 'none'
         }
     },
+    divider: {
+        [theme.breakpoints.down('xs')]: {
+            width: 2,
+            height: 50,
+            backgroundColor: theme.palette.primaryColor
+        }
+    },
     prevLinkButton: {
         visibility: ({ prevPage }) => prevPage ? 'visible' : 'hidden',
         width: '50%',
         textAlign: 'left',
+        textDecoration: 'none',
         [theme.breakpoints.between('sm','sm')]: {
             paddingLeft: '3em'
         },
         [theme.breakpoints.down('xs')]: {
-            textAlign: 'center',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: 50,
             boxSizing: 'border-box',
-            borderRight: `2px solid ${theme.palette.primaryColor}`
         }
     },
     nextLinkButton: {
         visibility: ({ nextPage }) => nextPage ? 'visible' : 'hidden',
         width: '50%',
         textAlign: 'right',
+        textDecoration: 'none',
         [theme.breakpoints.between('sm', 'sm')]: {
             paddingRight: '3em'
         },
         [theme.breakpoints.down('xs')]: {
-            textAlign: 'center',
-            boxSizing: 'border-box',
-            borderLeft: ({ prevPage }) => {
-                return prevPage ? 'none' : `2px solid ${theme.palette.primaryColor}`;
-            }
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: 50,
         }
     },
     linkText:{
@@ -224,6 +234,7 @@ const Navigation = injectSheet(styleSheet)(({
                     {pageTitles[prevPage]}
                 </div>
             </Link>
+            <div className={classes.divider}/>
             <Link className={classes.nextLinkButton} to={`/${nextPage}`}>
                 <div className={classes.linkText}>
                     {pageTitles[nextPage]}

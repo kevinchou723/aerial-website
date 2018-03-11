@@ -92,6 +92,9 @@ const styleSheet = theme => ({
             margin: 0
         }
     },
+    flexLgRec: {
+        margin: '0 10px',
+    },
     flexSmallRec:{
         margin: '0 10px',
         '& img': {
@@ -163,97 +166,121 @@ const DesktopHomeGrid = injectSheet(styleSheet)(({
 }) => {
     return (
         <React.Fragment>
-            <Flexbox flexDirection="column">
-                <Flexbox className={classes.flexSquare}>
-                    <ImageBox
-                        to='/fab-holiday'
-                        imgSrc={workData['fab-holiday'].profileImg}
-                        title={workData['fab-holiday'].title}
-                    />
+            <Flexbox flexDirection='column'>
+                <Flexbox>
+                    <Flexbox className={classes.flexSquare}>
+                        <ImageBox
+                            to='/fab-holiday'
+                            imgSrc={workData['fab-holiday'].profileImg}
+                            title={workData['fab-holiday'].title}
+                        />
+                    </Flexbox>
+                    <Flexbox className={classes.flexSquare}>
+                        <ImageBox
+                            to='/fab-webredesign'
+                            imgSrc={workData['fab-webredesign'].profileImg}
+                            title={workData['fab-webredesign'].title}
+                        />
+                    </Flexbox>
                 </Flexbox>
-                <Flexbox className={classes.flexSmallRec}>
-                    <ImageBox
-                        to='/fab-hellofab'
-                        imgSrc={workData['fab-hellofab'].profileImg}
-                        title={workData['fab-hellofab'].title}
-                    />
-                </Flexbox>
-                <Flexbox className={classes.flexSquare}>
-                    <ImageBox
-                        to='/fab-printad'
-                        imgSrc={workData['fab-printad'].profileImg}
-                        title={workData['fab-printad'].title}
-                    />
-                </Flexbox>
-                <Flexbox className={classes.flexSquare}>
+                <Flexbox className={classes.flexLgRec}>
                     <ImageBox
                         to='/ppf'
                         imgSrc={workData['ppf'].profileImg}
                         title={workData['ppf'].title}
                     />
                 </Flexbox>
-                <Flexbox className={classes.flexSmallRec} flexDirection="row">
-                    <Flexbox className={classes.flexSmSqLeft}>
-                        <ImageBox
-                            to='/ad-holiday'
-                            imgSrc={workData['ad-holiday'].profileImg}
-                            title={workData['ad-holiday'].title}
-                        />
+                <Flexbox>
+                    <Flexbox flexDirection="column">
+                        <Flexbox className={classes.flexSquare}>
+                            <ImageBox
+                                to='/obe-alphanumeric'
+                                imgSrc={workData['obe-alphanumeric'].profileImg}
+                                title={workData['obe-alphanumeric'].title}
+                            />
+                        </Flexbox>
+                        <Flexbox className={classes.flexSmallRec} flexDirection="row">
+                            <Flexbox className={classes.flexSmSqLeft}>
+                                <ImageBox
+                                    to='/aiga'
+                                    imgSrc={workData['aiga'].profileImg}
+                                    title={workData['aiga'].title}
+                                />
+                            </Flexbox>
+                            <Flexbox className={classes.flexSmSqRight}>
+                                <ImageBox
+                                    to='/gms'
+                                    imgSrc={workData['gms'].profileImg}
+                                    title={workData['gms'].title}
+                                />
+                            </Flexbox>
+                        </Flexbox>
                     </Flexbox>
-                    <Flexbox className={classes.flexSmSqRight}>
-                        <ImageBox
-                            to='/aiga'
-                            imgSrc={workData['aiga'].profileImg}
-                            title={workData['aiga'].title}
-                        />
-                    </Flexbox>
-                </Flexbox>
-            </Flexbox>
 
-            <Flexbox flexDirection="column">
-                <Flexbox className={classes.flexSmallRec}>
-                    <ImageBox
-                        to='/fab-selectedkits'
-                        imgSrc={workData['fab-selectedkits'].profileImg}
-                        title={workData['fab-selectedkits'].title}
-                    />
+                    <Flexbox flexDirection="column">
+                        <Flexbox className={classes.flexSmallRec} flexDirection="row">
+                            <Flexbox className={classes.flexSmSqLeft}>
+                                <ImageBox
+                                    to='/obe-fauxsaics'
+                                    imgSrc={workData['obe-fauxsaics'].profileImg}
+                                    title={workData['obe-fauxsaics'].title}
+                                />
+                            </Flexbox>
+                            <Flexbox className={classes.flexSmSqRight}>
+                                <ImageBox
+                                    to='/ad-holiday'
+                                    imgSrc={workData['ad-holiday'].profileImg}
+                                    title={workData['ad-holiday'].title}
+                                />
+                            </Flexbox>
+                        </Flexbox>
+                        <Flexbox className={classes.flexSquare}>
+                            <ImageBox
+                                to='/nomz'
+                                imgSrc={workData['nomz'].profileImg}
+                                title={workData['nomz'].title}
+                            />
+                        </Flexbox>
+                    </Flexbox>
                 </Flexbox>
-                <Flexbox className={classes.flexSquare}>
-                    <ImageBox
-                        to='/fab-webredesign'
-                        imgSrc={workData['fab-webredesign'].profileImg}
-                        title={workData['fab-webredesign'].title}
-                    />
-                </Flexbox>
-                <Flexbox className={classes.flexSquare}>
+                <Flexbox className={classes.flexLgRec}>
                     <ImageBox
                         to='/fab-collection'
                         imgSrc={workData['fab-collection'].profileImg}
                         title={workData['fab-collection'].title}
                     />
                 </Flexbox>
-                <Flexbox className={classes.flexSmallRec} flexDirection="row">
-                    <Flexbox className={classes.flexSmSqLeft}>
+                <Flexbox>
+                    <Flexbox className={classes.flexSquare}>
                         <ImageBox
-                            to='/nomz'
-                            imgSrc={workData['nomz'].profileImg}
-                            title={workData['nomz'].title}
+                            to='/obe-whm'
+                            imgSrc={workData['obe-whm'].profileImg}
+                            title={workData['obe-whm'].title}
                         />
                     </Flexbox>
-                    <Flexbox className={classes.flexSmSqRight}>
+                    <Flexbox className={classes.flexSquare}>
                         <ImageBox
-                            to='/gms'
-                            imgSrc={workData['gms'].profileImg}
-                            title={workData['gms'].title}
+                            to='/firstleaf'
+                            imgSrc={workData['firstleaf'].profileImg}
+                            title={workData['firstleaf'].title}
                         />
                     </Flexbox>
                 </Flexbox>
-                <Flexbox className={classes.flexSquare}>
-                    <ImageBox
-                        to='/firstleaf'
-                        imgSrc={workData['firstleaf'].profileImg}
-                        title={workData['firstleaf'].title}
-                    />
+                <Flexbox>
+                    <Flexbox className={classes.flexSquare}>
+                        <ImageBox
+                            to='/fab-printcollaterals'
+                            imgSrc={workData['fab-printcollaterals'].profileImg}
+                            title={workData['fab-printcollaterals'].title}
+                        />
+                    </Flexbox>
+                    <Flexbox className={classes.flexSquare}>
+                        <ImageBox
+                            to='/obe-spreadlove'
+                            imgSrc={workData['obe-spreadlove'].profileImg}
+                            title={workData['obe-spreadlove'].title}
+                        />
+                    </Flexbox>
                 </Flexbox>
             </Flexbox>
         </React.Fragment>

@@ -20,65 +20,8 @@ export default {
             { src: '/assets/img/work/fab-holiday/m-fab-2017holidaykits-4.jpg'},
             { src: '/assets/img/work/fab-holiday/m-fab-2017holidaykits-5.jpg'}
         ],
-        profileImg: '/assets/img/work/hp/hp-1.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-1.jpg'
-    },
-    'fab-selectedkits': {
-        title: 'First Aid Beauty - Selected Kits',
-        description: 'First Aid Beauty kits are curated to provide gentle yet effective skincare for a variety of occasions, such as a Mother’s day gift, a regimen suited for harsh and dry winters or a rejuvenating post-workout boost.',
-        client: 'First Aid Beauty',
-        designAgency: 'Adler Design',
-        creativeDirection: 'Deborah Adler',
-        role: 'Designer',
-        images: [
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-1.jpg', rows: 2, cols: 4 },
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-2.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-3.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-4.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-5.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-6.jpg', rows: 2, cols: 4 }
-        ],
-        mobileImages: [
-            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-1.jpg' },
-            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-2.jpg' },
-            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-3.jpg' },
-            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-4.jpg' },
-            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-5.jpg' },
-            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-6.jpg' }
-        ],
-        profileImg: '/assets/img/work/hp/hp-2.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-2.jpg'
-    },
-    'fab-hellofab': {
-        title: 'First Aid Beauty - Hello FAB Collection',
-        description: 'First Aid Beauty’s Hello FAB Collection focuses on superfood-powered skincare. Each product is a bridge between skincare and makeup, giving your skin an extra boost. The result is a healthy and natural glow.',
-        client: 'First Aid Beauty',
-        designAgency: 'Adler Design',
-        creativeDirection: 'Deborah Adler',
-        role: 'Designer',
-        images: [
-            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-1.jpg', rows: 2.3, cols: 4 },
-            { 
-                hasSubGrid: true,
-                innerImgs: [
-                    { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-2.gif', rows: 2, cols: 2, height: '50%', padding: '0 0 10px 0' },
-                    { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-4.jpg', rows: 2, cols: 2, height: '50%', padding: '10px 0 0 0' }
-                ],
-                rows: 4,
-                cols: 2
-            },
-            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-3.jpg', rows: 4, cols: 2  },
-            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-5.jpg', rows: 2.3, cols: 4  }
-        ],
-        mobileImages: [
-            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-1.jpg' },
-            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-2.gif' },
-            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-4.jpg' },
-            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-3.jpg' },
-            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-5.jpg' }
-        ],
-        profileImg: '/assets/img/work/hp/hp-3.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-3.jpg'
+        profileImg: '/assets/img/work/hp/hp-fab-holiday.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-fab-holiday.jpg'
     },
     'fab-webredesign': {
         title: 'First Aid Beauty - Website Redesign',
@@ -101,24 +44,28 @@ export default {
             { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-3.jpg' },
             { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-4.jpg' }
         ],
-        profileImg: '/assets/img/work/hp/hp-5.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-5.jpg'
+        profileImg: '/assets/img/work/hp/hp-fab-webredesign.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-fab-webredesign.jpg'
     },
-    'fab-printad': {
-        title: 'First Aid Beauty - Print Ad',
-        description: 'Ultra Repair Cream is First Aid Beauty’s top-selling product. It is a gentle yet effective moisturizer that is safe for even the most sensitive skin. The buoy and water emphasizes instant hydration and relief upon application.',
+    'fab-printcollaterals': {
+        title: 'First Aid Beauty - Print Collaterals',
+        description: 'First Aid Beauty is actively present across multiple platforms from promotional press materials, print advertisements and limited edition kits that are available only at QVC.',
         client: 'First Aid Beauty',
         designAgency: 'Adler Design',
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/fab-printad/fab-printad-1.jpg', rows: 4, cols: 4 }
+            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-1.jpg', rows: 2.3, cols: 4 },
+            { src: '/assets/img/work/fab-printad/fab-printad-1.jpg', rows: 4, cols: 4 },
+            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-1.jpg', rows: 2, cols: 4 },
         ],
         mobileImages: [
-            { src: '/assets/img/work/fab-printad/m-fab-printad-1.jpg' }
+            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-1.jpg' },
+            { src: '/assets/img/work/fab-printad/m-fab-printad-1.jpg' },
+            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-1.jpg' },
         ],
-        profileImg: '/assets/img/work/hp/hp-4.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-4.jpg'
+        profileImg: '/assets/img/work/hp/hp-fab-printcollateral.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-fab-printcollateral.jpg'
     },
     'fab-collection': {
         title: 'First Aid Beauty - Collection',
@@ -129,6 +76,8 @@ export default {
         role: 'Designer',
         images: [
             { src: '/assets/img/work/fab-collection/fab-collection-1.jpg', rows: 2.3, cols: 4  },
+            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-2.gif', rows: 2, cols: 2 },
+            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-4.jpg', rows: 2, cols: 2 },
             { src: '/assets/img/work/fab-collection/fab-collection-2.jpg', rows: 3, cols: 2.5  },
             {
                 hasSubGrid: true,
@@ -152,14 +101,16 @@ export default {
         ],
         mobileImages:[
             { src: '/assets/img/work/fab-collection/m-fab-collection-1.jpg' },
+            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-2.gif' },
+            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-4.jpg' },
             { src: '/assets/img/work/fab-collection/m-fab-collection-2.jpg' },
             { src: '/assets/img/work/fab-collection/m-fab-collection-3.jpg' },
             { src: '/assets/img/work/fab-collection/m-fab-collection-4.jpg' },
             { src: '/assets/img/work/fab-collection/m-fab-collection-5.jpg' },
             { src: '/assets/img/work/fab-collection/m-fab-collection-6.jpg'  },
         ],
-        profileImg: '/assets/img/work/hp/hp-6.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-6.jpg'
+        profileImg: '/assets/img/work/fab-collection/fab-collection-1.jpg',
+        mobileProfileImg: '/assets/img/work/fab-collection/m-fab-collection-1.jpg'
     },
     'ppf': {
         title: 'Prelude & Pink Flamingo',
@@ -206,8 +157,8 @@ export default {
             { src: '/assets/img/work/ppf/m-preludepinkflamingo-15.jpg' },
             { src: '/assets/img/work/ppf/m-preludepinkflamingo-16.jpg' },
         ],
-        profileImg: '/assets/img/work/hp/hp-7.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-7.jpg'
+        profileImg: '/assets/img/work/ppf/preludepinkflamingo-7.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-ppf.jpg'
     },
     'nomz': {
         title: 'NOMZ - Wholesome Asian Soups',
@@ -228,8 +179,8 @@ export default {
             { src: '/assets/img/work/nomz/m-nomz-4.jpg'},
             { src: '/assets/img/work/nomz/m-nomz-5.jpg'}
         ],
-        profileImg: '/assets/img/work/hp/hp-8.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-8.jpg'
+        profileImg: '/assets/img/work/hp/hp-nomz.jpg',
+        mobileProfileImg: '/assets/img/work/hp/hp-nomz.jpg'
     },
     'gms': {
         title: 'Greenwich Music Studio',
@@ -249,17 +200,19 @@ export default {
                 cols: 1.5
             },
             { src: '/assets/img/work/gms/greenwichmusicstudio-4.jpg', rows: 3, cols: 2.5 },
-            { src: '/assets/img/work/gms/greenwichmusicstudio-6.jpg', rows: 2.3, cols: 4 }
+            { src: '/assets/img/work/gms/greenwichmusicstudio-6.jpg', rows: 2.3, cols: 4 },
+            { src: '/assets/img/work/gms/greenwichmusicstudio-7.jpg', rows: 2.3, cols: 4 }
         ],
         mobileImages: [
             { src: '/assets/img/work/gms/m-greenwichmusicstudio-1.jpg' },
             { src: '/assets/img/work/gms/m-greenwichmusicstudio-2.jpg' },
             { src: '/assets/img/work/gms/m-greenwichmusicstudio-3.jpg', rows: 0.5 },
             { src: '/assets/img/work/gms/m-greenwichmusicstudio-4.jpg' },
-            { src: '/assets/img/work/gms/m-greenwichmusicstudio-6.jpg' }
+            { src: '/assets/img/work/gms/m-greenwichmusicstudio-6.jpg' },
+            { src: '/assets/img/work/gms/m-greenwichmusicstudio-7.jpg' },
         ],
-        profileImg: '/assets/img/work/hp/hp-9.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-9.jpg'
+        profileImg: '/assets/img/work/gms/greenwichmusicstudio-3.jpg',
+        mobileProfileImg: '/assets/img/work/gms/greenwichmusicstudio-3.jpg'
     },
     'ad-holiday': {
         title: 'Adler Design - Holiday Greetings',
@@ -275,8 +228,8 @@ export default {
             { src: '/assets/img/work/ad-holiday/ad-holiday-1.gif', rows: 1.25},
             { src: '/assets/img/work/ad-holiday/ad-holiday-2.gif', rows: 1.25},
         ],
-        profileImg: '/assets/img/work/hp/hp-10.gif',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-10.gif'
+        profileImg: '/assets/img/work/hp/hp-ad-holiday.gif',
+        mobileProfileImg: '/assets/img/work/hp/hp-ad-holiday.gif'
     },
     'aiga': {
         title: 'AIGA Women Lead Initiative',
@@ -294,8 +247,8 @@ export default {
             { src: '/assets/img/work/aiga/m-aiga-1.jpg' },
             { src: '/assets/img/work/aiga/m-aiga-2.jpg' },
         ],
-        profileImg: '/assets/img/work/hp/hp-11.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-11.jpg'
+        profileImg: '/assets/img/work/hp/hp-aiga.jpg',
+        mobileProfileImg: '/assets/img/work/hp/hp-aiga.jpg'
     },
     'firstleaf': {
         title: 'FirstLeaf - Cover Wraps',
@@ -315,7 +268,84 @@ export default {
             { src: '/assets/img/work/firstleaf/m-firstleaf-3.jpg' },
             { src: '/assets/img/work/firstleaf/m-firstleaf-4.jpg' }
         ],
-        profileImg: '/assets/img/work/hp/hp-12.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-12.jpg'
+        profileImg: '/assets/img/work/firstleaf/firstleaf-1.jpg',
+        mobileProfileImg: '/assets/img/work/firstleaf/m-firstleaf-1.jpg'
+    },
+    'obe-alphanumeric': {
+        title: 'Alphanumeric Series',
+        description: 'Alphanumeric Series is an ongoing passion project that explores the composition, form and colors of letters, numbers and symbols.',
+        role: 'Designer, Lettering and Illustration',
+        images: [
+            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-1.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-2.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-3.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-4.jpg', rows: 2, cols: 2 }
+        ],
+        mobileImages: [
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-1.jpg' },
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-2.jpg' },
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-3.jpg' },
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-4.jpg' }
+        ],
+        profileImg: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-2.jpg',
+        mobileProfileImg: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-2.jpg'
+    },
+    'obe-whm': {
+        title: 'Women’s History Month',
+        description: 'A lettering series inspired by quotes of leading women figures. Each piece revolves around the letter W  and celebrates Women’s History Month.',
+        role: 'Designer, Lettering and Illustration',
+        images: [
+            { src: '/assets/img/work/obe-whm/obe-whm-1.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/obe-whm/obe-whm-2.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/obe-whm/obe-whm-3.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-4.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/obe-whm/obe-whm-5.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/obe-whm/obe-whm-6.jpg', rows: 2, cols: 2 },
+        ],
+        mobileImages: [
+            { src: '/assets/img/work/obe-whm/m-obe-whm-1.jpg' },
+            { src: '/assets/img/work/obe-whm/m-obe-whm-2.jpg' },
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-4.jpg' },
+            { src: '/assets/img/work/obe-whm/m-obe-whm-4.jpg' },
+            { src: '/assets/img/work/obe-whm/m-obe-whm-5.jpg' },
+            { src: '/assets/img/work/obe-whm/m-obe-whm-6.jpg' },
+        ],
+        profileImg: '/assets/img/work/obe-whm/obe-whm-5.jpg',
+        mobileProfileImg: '/assets/img/work/obe-whm/m-obe-whm-5.jpg'
+    },
+    'obe-spreadlove': {
+        title: 'Spread Love',
+        description: 'Love is a strong and powerful word that radiates from within. This is a conceptual piece, encouraging less screen time and promoting the act of sending love and appreciation through snail mail.',
+        role: 'Designer, Lettering and Illustration',
+        images: [
+            { src: '/assets/img/work/obe-spreadlove/obe-spreadlove-1.jpg', rows: 4, cols: 4 },
+            { src: '/assets/img/work/obe-spreadlove/obe-spreadlove-2.jpg', rows: 2, cols: 4 },
+        ],
+        mobileImages: [
+            { src: '/assets/img/work/obe-spreadlove/m-obe-spreadlove-1.jpg' },
+            { src: '/assets/img/work/obe-spreadlove/m-obe-spreadlove-2.jpg' },
+            { src: '/assets/img/work/obe-spreadlove/m-obe-spreadlove-3.jpg' },
+            { src: '/assets/img/work/obe-spreadlove/m-obe-spreadlove-4.jpg' },
+        ],
+        profileImg: '/assets/img/work/obe-spreadlove/obe-spreadlove-1.jpg',
+        mobileProfileImg: '/assets/img/work/obe-spreadlove/m-obe-spreadlove-1.jpg'
+    },
+    'obe-fauxsaics': {
+        title: 'Fauxsaics - I Don’t Know',
+        description: 'A creative block can be extremely discouraging and frustrating, however the key is to not stop. This piece captures the irony of a defeated phrase that is executed meticulously with tiles.*',
+        role: 'Designer, Lettering and Illustration',
+        subNote: '*This tiling technique is inspired by Nick Misani.',
+        images: [
+            { src: '/assets/img/work/obe-fauxsaics/obe-fauxsaics-1.jpg', rows: 4, cols: 4 },
+            { src: '/assets/img/work/obe-fauxsaics/obe-fauxsaics-3.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/obe-fauxsaics/obe-fauxsaics-2.jpg', rows: 2, cols: 2 },
+        ],
+        mobileImages: [
+            { src: '/assets/img/work/obe-fauxsaics/m-obe-fauxsaics-1.jpg' },
+            { src: '/assets/img/work/obe-fauxsaics/m-obe-fauxsaics-3.jpg' },
+            { src: '/assets/img/work/obe-fauxsaics/m-obe-fauxsaics-2.jpg' },
+        ],
+        profileImg: '/assets/img/work/obe-fauxsaics/obe-fauxsaics-1.jpg',
+        mobileProfileImg: '/assets/img/work/obe-fauxsaics/m-obe-fauxsaics-1.jpg'
     }
 }
