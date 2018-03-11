@@ -38,7 +38,7 @@ const styleSheet = theme => ({
         width: '100%'
     },
     bottomSection: {
-        margin: '2em 0',
+        margin: '4em 0',
         display: 'flex',
         [theme.breakpoints.between('sm', 'sm')]: {
             margin: '2em 3em'
