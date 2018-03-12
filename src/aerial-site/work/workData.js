@@ -299,7 +299,7 @@ export default {
             { src: '/assets/img/work/obe-whm/obe-whm-2.jpg', rows: 2, cols: 2 },
             { src: '/assets/img/work/obe-whm/obe-whm-3.jpg', rows: 2, cols: 2 },
             { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-4.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/obe-whm/obe-whm-5.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/obe-whm/obe-whm-5.gif', rows: 2, cols: 2 },
             { src: '/assets/img/work/obe-whm/obe-whm-6.jpg', rows: 2, cols: 2 },
         ],
         mobileImages: [
@@ -307,7 +307,7 @@ export default {
             { src: '/assets/img/work/obe-whm/obe-whm-2.jpg' },
             { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-4.jpg' },
             { src: '/assets/img/work/obe-whm/m-obe-whm-4.jpg' },
-            { src: '/assets/img/work/obe-whm/m-obe-whm-5.jpg' },
+            { src: '/assets/img/work/obe-whm/obe-whm-5.gif' },
             { src: '/assets/img/work/obe-whm/m-obe-whm-6.jpg' },
         ],
         profileImg: '/assets/img/work/obe-whm/obe-whm-5.jpg',
