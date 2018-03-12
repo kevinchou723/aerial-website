@@ -304,7 +304,7 @@ export default {
         ],
         mobileImages: [
             { src: '/assets/img/work/obe-whm/m-obe-whm-1.jpg' },
-            { src: '/assets/img/work/obe-whm/m-obe-whm-2.jpg' },
+            { src: '/assets/img/work/obe-whm/obe-whm-2.jpg' },
             { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-4.jpg' },
             { src: '/assets/img/work/obe-whm/m-obe-whm-4.jpg' },
             { src: '/assets/img/work/obe-whm/m-obe-whm-5.jpg' },
