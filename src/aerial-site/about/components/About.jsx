@@ -95,6 +95,10 @@ const styleSheet = theme => ({
         borderColor: theme.palette.primaryColor,
         borderWidth: '1px 0'
     },
+    obeWrapper: {
+        padding: '2em 0',
+        borderBottom: `1px solid ${theme.palette.primaryColor}`,
+    },
     siteByWrapper:{
         paddingTop: '2em',
         lineHeight: '1.25em',
@@ -189,6 +193,9 @@ const About = ({
                         </div>
                         <div className={classes.linkedinWrapper}>
                             <a className={classes.sectionTitle} href="https://www.linkedin.com/in/aerialchen" target="_blank" rel="noopener noreferrer"> LinkedIn </a>
+                        </div>
+                        <div className={classes.obeWrapper}>
+                            <a className={classes.sectionTitle} href="https://www.instagram.com/obedesign/" target="_blank" rel="noopener noreferrer"> Obé Design </a>
                         </div>
                         <div className={classes.siteByWrapper}>
                             <p className={classes.site}>Site:</p>

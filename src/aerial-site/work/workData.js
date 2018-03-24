@@ -31,7 +31,7 @@ export default {
         designAgency: 'Adler Design*',
         creativeDirection: 'Deborah Adler',
         role: 'Designer',
-        subNote: '*Adler Design provided creative direction and brand assets to support the redesign.',
+        subNote: '*Adler Design provided creative direction and brand assets to support the website redesign.',
         images: [
             { src: '/assets/img/work/fab-webprintcollateral/fab-webprintcollateral-1.jpg', rows: 2.3, cols: 4 },
             { src: '/assets/img/work/fab-webprintcollateral/fab-webprintcollateral-2.jpg', rows: 2, cols: 2 },
