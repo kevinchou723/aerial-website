@@ -20,12 +20,12 @@ export default {
             { src: '/assets/img/work/fab-holiday/m-fab-2017holidaykits-4.jpg'},
             { src: '/assets/img/work/fab-holiday/m-fab-2017holidaykits-5.jpg'}
         ],
-        profileImg: '/assets/img/work/hp/hp-fab-holiday.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-fab-holiday.jpg'
+        profileImg: '/assets/img/work/fab-holiday/fab-2017holidaykits-4.jpg',
+        mobileProfileImg: '/assets/img/work/fab-holiday/m-fab-2017holidaykits-4.jpg'
     },
-    'fab-webredesign': {
-        title: 'First Aid Beauty - Website Redesign',
-        description: 'The concept behind First Aid Beauty’s new website is to emphasize the brand’s mission and values such as being approachable, direct, witty and fun. This is translated through the use of playful yet informative photography, tone of voice and graphical elements.',
+    'fab-webprintcollateral': {
+        title: 'First Aid Beauty - Web & Print Collateral',
+        description: 'First Aid Beauty’s brand mission and values include being approachable, direct, witty and fun. This is translated through the use of playful yet informative photography, tone of voice and graphical elements across both digital and print platforms.',
         client: 'First Aid Beauty',
         digitalAgency: 'Sweden Unlimited',
         designAgency: 'Adler Design*',
@@ -33,39 +33,25 @@ export default {
         role: 'Designer',
         subNote: '*Adler Design provided creative direction and brand assets to support the redesign.',
         images: [
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-1.jpg', rows: 2.3, cols: 4 },
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-2.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-3.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/fab-webredesign/fab-webredesign-4.jpg', rows: 2.3, cols: 4 }
+            { src: '/assets/img/work/fab-webprintcollateral/fab-webprintcollateral-1.jpg', rows: 2.3, cols: 4 },
+            { src: '/assets/img/work/fab-webprintcollateral/fab-webprintcollateral-2.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/fab-webprintcollateral/fab-webprintcollateral-3.gif', rows: 2, cols: 2 },
+            { src: '/assets/img/work/fab-webprintcollateral/fab-webprintcollateral-4.jpg', rows: 2.3, cols: 4 },
+            { src: '/assets/img/work/fab-webprintcollateral/fab-webprintcollateral-5.jpg', rows: 2.3, cols: 4 },
+            { src: '/assets/img/work/fab-webprintcollateral/fab-webprintcollateral-6.jpg', rows: 4, cols: 4 },
+            { src: '/assets/img/work/fab-webprintcollateral/fab-webprintcollateral-7.jpg', rows: 2.3, cols: 4 },
         ],
         mobileImages: [
-            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-1.jpg' },
-            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-2.jpg' },
-            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-3.jpg' },
-            { src: '/assets/img/work/fab-webredesign/m-fab-webredesign-4.jpg' }
+            { src: '/assets/img/work/fab-webprintcollateral/m-fab-webprintcollateral-1.jpg' },
+            { src: '/assets/img/work/fab-webprintcollateral/m-fab-webprintcollateral-2.jpg' },
+            { src: '/assets/img/work/fab-webprintcollateral/m-fab-webprintcollateral-3.gif' },
+            { src: '/assets/img/work/fab-webprintcollateral/m-fab-webprintcollateral-4.jpg' },
+            { src: '/assets/img/work/fab-webprintcollateral/m-fab-webprintcollateral-5.jpg' },
+            { src: '/assets/img/work/fab-webprintcollateral/fab-webprintcollateral-6.jpg' },
+            { src: '/assets/img/work/fab-webprintcollateral/m-fab-webprintcollateral-7.jpg' },
         ],
-        profileImg: '/assets/img/work/hp/hp-fab-webredesign.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-fab-webredesign.jpg'
-    },
-    'fab-printcollaterals': {
-        title: 'First Aid Beauty - Print Collaterals',
-        description: 'First Aid Beauty is actively present across multiple platforms from promotional press materials, print advertisements and limited edition kits that are available only at QVC.',
-        client: 'First Aid Beauty',
-        designAgency: 'Adler Design',
-        creativeDirection: 'Deborah Adler',
-        role: 'Designer',
-        images: [
-            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-1.jpg', rows: 2.3, cols: 4 },
-            { src: '/assets/img/work/fab-printad/fab-printad-1.jpg', rows: 4, cols: 4 },
-            { src: '/assets/img/work/fab-selectedkits/fab-selectedkits-1.jpg', rows: 2, cols: 4 },
-        ],
-        mobileImages: [
-            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-1.jpg' },
-            { src: '/assets/img/work/fab-printad/m-fab-printad-1.jpg' },
-            { src: '/assets/img/work/fab-selectedkits/m-fab-selectedkits-1.jpg' },
-        ],
-        profileImg: '/assets/img/work/hp/hp-fab-printcollateral.jpg',
-        mobileProfileImg: '/assets/img/work/hp/m-hp-fab-printcollateral.jpg'
+        profileImg: '/assets/img/work/hp/hp-fab-webprintcollateral.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-fab-webprintcollateral.jpg'
     },
     'fab-collection': {
         title: 'First Aid Beauty - Collection',
@@ -76,8 +62,8 @@ export default {
         role: 'Designer',
         images: [
             { src: '/assets/img/work/fab-collection/fab-collection-1.jpg', rows: 2.3, cols: 4  },
-            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-2.gif', rows: 2, cols: 2 },
-            { src: '/assets/img/work/fab-hellofab/fab-hellofabcollection-4.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/fab-collection/fab-collection-8.gif', rows: 2, cols: 2 },
+            { src: '/assets/img/work/fab-collection/fab-collection-9.jpg', rows: 2, cols: 2 },
             { src: '/assets/img/work/fab-collection/fab-collection-2.jpg', rows: 3, cols: 2.5  },
             {
                 hasSubGrid: true,
@@ -88,6 +74,7 @@ export default {
                 rows: 3,
                 cols: 1.5
             },
+            { src: '/assets/img/work/fab-collection/fab-collection-10.jpg', rows: 2, cols: 4 },
             {
                 hasSubGrid: true,
                 innerImgs: [
@@ -101,16 +88,18 @@ export default {
         ],
         mobileImages:[
             { src: '/assets/img/work/fab-collection/m-fab-collection-1.jpg' },
-            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-2.gif' },
-            { src: '/assets/img/work/fab-hellofab/m-fab-hellofabcollection-4.jpg' },
+            { src: '/assets/img/work/fab-collection/m-fab-collection-8.gif' },
+            { src: '/assets/img/work/fab-collection/m-fab-collection-9.jpg' },
             { src: '/assets/img/work/fab-collection/m-fab-collection-2.jpg' },
             { src: '/assets/img/work/fab-collection/m-fab-collection-3.jpg' },
             { src: '/assets/img/work/fab-collection/m-fab-collection-4.jpg' },
+            { src: '/assets/img/work/fab-collection/m-fab-collection-10.jpg' },
             { src: '/assets/img/work/fab-collection/m-fab-collection-5.jpg' },
-            { src: '/assets/img/work/fab-collection/m-fab-collection-6.jpg'  },
+            { src: '/assets/img/work/fab-collection/m-fab-collection-6.jpg' },
+            { src: '/assets/img/work/fab-collection/m-fab-collection-7.jpg' },
         ],
-        profileImg: '/assets/img/work/fab-collection/fab-collection-1.jpg',
-        mobileProfileImg: '/assets/img/work/fab-collection/m-fab-collection-1.jpg'
+        profileImg: '/assets/img/work/hp/hp-fab-collection.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-fab-collection.jpg'
     },
     'ppf': {
         title: 'Prelude & Pink Flamingo',
@@ -118,13 +107,7 @@ export default {
         client: 'Prelude & Pink Flamingo',
         role: 'Designer',
         images: [
-            { src: '/assets/img/work/ppf/preludepinkflamingo-1.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-2.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-3.jpg', rows: 2, cols: 4 },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-4.jpg', rows: 2, cols: 4 },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-5.jpg', rows: 2, cols: 4 },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-6.jpg', rows: 2, cols: 4 },
-            { src: '/assets/img/work/ppf/preludepinkflamingo-7.jpg', rows: 2, cols: 4 },
+            
             { src: '/assets/img/work/ppf/preludepinkflamingo-8.gif', rows: 2, cols: 2 },
             { src: '/assets/img/work/ppf/preludepinkflamingo-9.jpg', rows: 2, cols: 2 },
             { src: '/assets/img/work/ppf/preludepinkflamingo-10.jpg', rows: 2, cols: 4 },
@@ -137,16 +120,16 @@ export default {
                 ],
                 rows: 4,
                 cols: 2
-            }
+            },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-7.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-1.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-2.jpg', rows: 2, cols: 2 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-3.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-4.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-5.jpg', rows: 2, cols: 4 },
+            { src: '/assets/img/work/ppf/preludepinkflamingo-6.jpg', rows: 2, cols: 4 },
         ],
         mobileImages: [
-            { src: '/assets/img/work/ppf/m-preludepinkflamingo-1.jpg' },
-            { src: '/assets/img/work/ppf/m-preludepinkflamingo-2.jpg' },
-            { src: '/assets/img/work/ppf/m-preludepinkflamingo-3.jpg' },
-            { src: '/assets/img/work/ppf/m-preludepinkflamingo-4.jpg' },
-            { src: '/assets/img/work/ppf/m-preludepinkflamingo-5.jpg' },
-            { src: '/assets/img/work/ppf/m-preludepinkflamingo-6.jpg' },
-            { src: '/assets/img/work/ppf/m-preludepinkflamingo-7.jpg' },
             { src: '/assets/img/work/ppf/m-preludepinkflamingo-8.gif' },
             { src: '/assets/img/work/ppf/m-preludepinkflamingo-9.jpg' },
             { src: '/assets/img/work/ppf/m-preludepinkflamingo-10.jpg' },
@@ -156,31 +139,16 @@ export default {
             { src: '/assets/img/work/ppf/m-preludepinkflamingo-14.jpg' },
             { src: '/assets/img/work/ppf/m-preludepinkflamingo-15.jpg' },
             { src: '/assets/img/work/ppf/m-preludepinkflamingo-16.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-7.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-1.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-2.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-3.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-4.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-5.jpg' },
+            { src: '/assets/img/work/ppf/m-preludepinkflamingo-6.jpg' },
         ],
-        profileImg: '/assets/img/work/ppf/preludepinkflamingo-7.jpg',
+        profileImg: '/assets/img/work/hp/hp-ppf.jpg',
         mobileProfileImg: '/assets/img/work/hp/m-hp-ppf.jpg'
-    },
-    'nomz': {
-        title: 'NOMZ - Wholesome Asian Soups',
-        description: 'NOMZ specializes in wholesome Asian soups for busy individuals. Their vision is to create the most trusted, clean and accessible traditional Asian food brand in America.',
-        client: 'NOMZ',
-        role: 'Designer',
-        images: [
-            { src: '/assets/img/work/nomz/nomz-1.jpg', rows: 2.3, cols: 4  },
-            { src: '/assets/img/work/nomz/nomz-2.jpg', rows: 2.3, cols: 4  },
-            { src: '/assets/img/work/nomz/nomz-3.jpg', rows: 2.3, cols: 4  },
-            { src: '/assets/img/work/nomz/nomz-4.jpg', rows: 2.3, cols: 4  },
-            { src: '/assets/img/work/nomz/nomz-5.jpg', rows: 2.3, cols: 4  }
-        ],
-        mobileImages: [
-            { src: '/assets/img/work/nomz/m-nomz-1.jpg'},
-            { src: '/assets/img/work/nomz/m-nomz-2.jpg'},
-            { src: '/assets/img/work/nomz/m-nomz-3.jpg'},
-            { src: '/assets/img/work/nomz/m-nomz-4.jpg'},
-            { src: '/assets/img/work/nomz/m-nomz-5.jpg'}
-        ],
-        profileImg: '/assets/img/work/hp/hp-nomz.jpg',
-        mobileProfileImg: '/assets/img/work/hp/hp-nomz.jpg'
     },
     'gms': {
         title: 'Greenwich Music Studio',
@@ -247,8 +215,8 @@ export default {
             { src: '/assets/img/work/aiga/m-aiga-1.jpg' },
             { src: '/assets/img/work/aiga/m-aiga-2.jpg' },
         ],
-        profileImg: '/assets/img/work/hp/hp-aiga.jpg',
-        mobileProfileImg: '/assets/img/work/hp/hp-aiga.jpg'
+        profileImg: '/assets/img/work/aiga/aiga-2.jpg',
+        mobileProfileImg: '/assets/img/work/aiga/m-aiga-2.jpg'
     },
     'firstleaf': {
         title: 'FirstLeaf - Cover Wraps',
@@ -276,19 +244,50 @@ export default {
         description: 'Alphanumeric Series is an ongoing passion project that explores the composition, form and colors of letters, numbers and symbols.',
         role: 'Designer, Lettering and Illustration',
         images: [
-            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-1.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-2.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-3.jpg', rows: 2, cols: 2 },
-            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-4.jpg', rows: 2, cols: 2 }
+            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-9.jpg', rows: 3, cols: 2.5 },
+            {
+                hasSubGrid: true,
+                innerImgs: [
+                    { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-8.jpg', rows: 1, cols: 1, height: '50%', padding: '0 0 10px 0' },
+                    { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-7.jpg', rows: 1, cols: 1, height: '50%', padding: '10px 0 0 0' }
+                ],
+                rows: 3,
+                cols: 1.5
+            },
+            {
+                hasSubGrid: true,
+                innerImgs: [
+                    { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-6.jpg', rows: 1, cols: 1, height: '50%', padding: '0 0 10px 0' },
+                    { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-5.jpg', rows: 1, cols: 1, height: '50%', padding: '10px 0 0 0' }
+                ],
+                rows: 3,
+                cols: 1.5
+            },
+            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-4.jpg', rows: 3, cols: 2.5 },
+            { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-1.jpg', rows: 3, cols: 2.5 },
+            {
+                hasSubGrid: true,
+                innerImgs: [
+                    { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-3.jpg', rows: 1, cols: 1, height: '50%', padding: '0 0 10px 0' },
+                    { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-2.jpg', rows: 1, cols: 1, height: '50%', padding: '10px 0 0 0' }
+                ],
+                rows: 3,
+                cols: 1.5
+            },
         ],
         mobileImages: [
-            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-1.jpg' },
-            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-2.jpg' },
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-9.jpg' },
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-8.jpg' },
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-7.jpg' },
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-6.jpg' },
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-5.jpg' },
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-4.jpg' },
             { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-3.jpg' },
-            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-4.jpg' }
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-2.jpg' },
+            { src: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-1.jpg' },
         ],
-        profileImg: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-2.jpg',
-        mobileProfileImg: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-2.jpg'
+        profileImg: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-9.jpg',
+        mobileProfileImg: '/assets/img/work/obe-alphanumeric/m-obe-alphanumeric-9.jpg'
     },
     'obe-whm': {
         title: 'Women’s History Month',
@@ -310,8 +309,8 @@ export default {
             { src: '/assets/img/work/obe-whm/obe-whm-5.gif' },
             { src: '/assets/img/work/obe-whm/m-obe-whm-6.jpg' },
         ],
-        profileImg: '/assets/img/work/obe-whm/obe-whm-5.jpg',
-        mobileProfileImg: '/assets/img/work/obe-whm/m-obe-whm-5.jpg'
+        profileImg: '/assets/img/work/obe-whm/obe-whm-5.gif',
+        mobileProfileImg: '/assets/img/work/obe-whm/obe-whm-5.gif'
     },
     'obe-spreadlove': {
         title: 'Spread Love',
@@ -327,8 +326,8 @@ export default {
             { src: '/assets/img/work/obe-spreadlove/m-obe-spreadlove-3.jpg' },
             { src: '/assets/img/work/obe-spreadlove/m-obe-spreadlove-4.jpg' },
         ],
-        profileImg: '/assets/img/work/obe-spreadlove/obe-spreadlove-1.jpg',
-        mobileProfileImg: '/assets/img/work/obe-spreadlove/m-obe-spreadlove-1.jpg'
+        profileImg: '/assets/img/work/hp/hp-obe-spreadlove.jpg',
+        mobileProfileImg: '/assets/img/work/hp/m-hp-obe-spreadlove.jpg'
     },
     'obe-fauxsaics': {
         title: 'Fauxsaics - I Don’t Know',

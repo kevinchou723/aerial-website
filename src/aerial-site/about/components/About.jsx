@@ -19,12 +19,14 @@ const styleSheet = theme => ({
     },
     quote:{
         marginBottom: '0.3em',
+        maxWidth: '75%',
         color: theme.palette.primaryColor,
         fontWeight: 700,
         fontSize: '2.25em',
         [theme.breakpoints.down('xs')]: {
             fontSize: '1.5em',
-            lineHeight: 1.5
+            lineHeight: 1.5,
+            maxWidth: '100%',
         }
     },
     albert:{
@@ -56,7 +58,7 @@ const styleSheet = theme => ({
     },
     description:{
         fontWeight: 300,
-        fontSize: '1.8em',
+        fontSize: '1.5em',
         lineHeight: '1.6em',
         [theme.breakpoints.between('sm', 'sm')]: {
             fontSize: '1.5em'
@@ -160,8 +162,8 @@ const About = ({
         <Panel>
             <div className={classes.aboutWrapper}>
                 <div className={classes.topSection}>
-                    <h2 className={classes.quote}>“Creativity is intelligence having fun”</h2>
-                    <p className={classes.albert}>- Albert Einstein</p>
+                    <h2 className={classes.quote}>“Serious playfulness makes it possible to be both engaged and carefree at the same time”</h2>
+                    <p className={classes.albert}>- Mihaly Csikszentmihalyi</p>
                 </div>
                 <div className={classes.midSection}>
                     <img alt="about" className={classes.aboutImage} src={profileImage}/>
@@ -169,13 +171,12 @@ const About = ({
                 <div className={classes.bottomSection}>
                     <div className={classes.bottomLeft}>
                         <p className={classes.description}>
-                            Aerial Chen is a Graphic Designer based in New York City.
-                        She previously worked at the multidisciplinary studio Adler Design
-                        following graduation from the School of Visual Arts.  Aerial’s work is designed to
-                        delight, whilst educating and forming meaningful connections and experiences.
-                        When Aerial is away from her keyboard, she enjoys observing the minutiae of everyday life, 
-                        with a pencil in one hand and a sketchbook in the other.
-                    </p>
+                            Aerial is a designer based in NYC specializing in Branding, Print Design and Creative Direction. She previously worked at the multidisciplinary studio, Adler Design as a senior designer following graduation from the School of Visual Arts. 
+                        <br/><br/>
+                            She is dedicated to transforming shapes, letterforms and colors into impactful, meaningful and delightful experiences via print, digital and environmental platforms. 
+                        <br /><br />
+                            On the side, Aerial continuously expands her design vocabulary and skillset through passion projects. Her latest ventures include Lettering, Digital Design (UI and HTML&CSS) and Motion Graphics. 
+                        </p>
                     </div>
                     <div className={classes.bottomRight}>
                         <div className={classes.contactWrapper}>
