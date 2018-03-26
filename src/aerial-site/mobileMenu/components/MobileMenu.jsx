@@ -21,21 +21,21 @@ const styleSheet = theme => ({
         padding: '1.5em 2.5em'
     },
     content: {
-        padding: '2.5em 0',
+        padding: '1.75em 0',
         borderBottom: `1px solid ${theme.palette.white}`
     },
     contentFirst:{
-        padding: '1.5em 0 2.5em 0',
+        padding: '1.5em 0 1.75em 0',
         borderBottom: `1px solid ${theme.palette.white}`
     },
     contentLast: {
-        padding: '2.5em 0'
+        padding: '1.75em 0'
     },
     sectionTitle: {
         textDecoration: 'none',
         color: theme.palette.white,
         fontWeight: 600,
-        fontSize: '1.75em',
+        fontSize: '1.5em',
         textTransform: 'uppercase',
         width: '100%',
         display: 'block'
@@ -43,7 +43,7 @@ const styleSheet = theme => ({
     email: {
         textDecoration: 'none',
         color: theme.palette.white,
-        fontSize: '1.25em'
+        fontSize: '1.1em'
     },
 });
 
@@ -79,8 +79,11 @@ const MobileMenu = ({
                         <a className={classes.email} onClick={handleClick} href="mailto:aerialah@gmail.com"> aerialah@gmail.com </a>
                     </div>
                 </div>
-                <div className={classes.contentLast}>
+                <div className={classes.content}>
                     <a className={classes.sectionTitle} onClick={handleClick} href="https://www.linkedin.com/in/aerialchen" target="_blank" rel="noopener noreferrer"> LinkedIn </a>
+                </div>
+                <div className={classes.contentLast}>
+                    <a className={classes.sectionTitle} href="https://www.instagram.com/obedesign/" target="_blank" rel="noopener noreferrer"> Obé Design </a>
                 </div>
             </div>
         </div>

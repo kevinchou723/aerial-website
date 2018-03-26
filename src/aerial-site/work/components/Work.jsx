@@ -34,6 +34,14 @@ const styleSheet = theme => ({
         lineHeight: '1.5',
         fontWeight: 300
     },
+    forMore: {
+        display: 'block'
+    },
+    forMoreAnchor: {
+        textDecoration: 'none',
+        fontWeight: 700,
+        color: theme.palette.primaryColor,
+    },
     infoWrapper:{
         display: 'flex',
         [theme.breakpoints.down('xs')]: {
@@ -210,7 +218,18 @@ const Info = injectSheet(styleSheet)(({
     return (
         <div className={classes.infoWrapper}>
             <div className={classes.leftInfo}>
-                <p className={classes.description}>{work.description}</p>
+                <p className={classes.description}>
+                    {work.description}
+                    {
+                        work.forMore &&
+                        <i className={classes.forMore}>
+                            {work.forMore.text}
+                            <a className={classes.forMoreAnchor} href={work.forMore.link} target="_blank" rel="noopener noreferrer">
+                                {work.forMore.linkText}
+                            </a>
+                        </i>
+                    }
+                </p>
             </div>
             <div className={classes.rightInfo}>
                 {work.client && <div><span className={classes.infoTitle}>Client: </span>{work.client}</div>}

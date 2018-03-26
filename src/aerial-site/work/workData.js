@@ -105,7 +105,7 @@ export default {
         title: 'Prelude & Pink Flamingo',
         description: 'Prelude is a Neo French Bistro serving locally sourced ingredients. Each dish is developed to best highlight the quality, flavor and texture of the ingredient. Pink Flamingo is an 80’s themed concept bar by Prelude. It also uses local produces to create quality drinks inspired by the era.',
         client: 'Prelude & Pink Flamingo',
-        role: 'Designer',
+        role: 'Creative Director, Designer',
         images: [
             
             { src: '/assets/img/work/ppf/preludepinkflamingo-8.gif', rows: 2, cols: 2 },
@@ -242,6 +242,11 @@ export default {
     'obe-alphanumeric': {
         title: 'Alphanumeric Series',
         description: 'Alphanumeric Series is an ongoing passion project that explores the composition, form and colors of letters, numbers and symbols.',
+        forMore: {
+            link: 'https://www.instagram.com/obedesign/',
+            linkText: 'Obé Design!',
+            text: 'For more Alphanumeric Series, check out ',
+        },
         role: 'Designer, Lettering and Illustration',
         images: [
             { src: '/assets/img/work/obe-alphanumeric/obe-alphanumeric-9.jpg', rows: 3, cols: 2.5 },
