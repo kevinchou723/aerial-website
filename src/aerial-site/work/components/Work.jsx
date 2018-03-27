@@ -1,12 +1,13 @@
 import React from 'react';
 import injectSheet from 'react-jss';
+import { Redirect } from 'react-router-dom';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
 import branch from 'recompose/branch';
 import lifecycle from 'recompose/lifecycle';
+import withProps from 'recompose/withProps';
 import { Link } from 'react-router-dom';
 import { Panel, Grid } from '../../common';
-import renderNothing from 'recompose/renderNothing';
 import { pageNames, pageTitles } from '../constants';
 
 import windowDimensions from 'react-window-dimensions';
@@ -182,12 +183,12 @@ const styleSheet = theme => ({
     }
 });
 
+const RedirectToHome = withProps({ to: '/' })(Redirect);
+
 const branchProp = branch(
-    ({ workType, workData }) => {
-        return workType !== '' && workData[workType] !== undefined
-    },
+    ({ workType, workData }) => workType !== '' && workData[workType] !== undefined,
     Work => Work,
-    renderNothing
+    () => RedirectToHome
 );
 
 const Work = ({
