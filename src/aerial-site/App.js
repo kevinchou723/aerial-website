@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Route } from 'react-router-dom';
+import { withRouter, Route, Switch } from 'react-router-dom';
 import compose from 'recompose/compose';
 import { Header } from './header';
 import { Footer } from './footer';
@@ -19,9 +19,11 @@ const App = (props) => {
     <div className='app-container'>
       <Header/>
       <MobileMenu/>
-      <Route exact path="/" component={Home} />
+      <Switch>
+        <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route path="/:workType" render={props => <WorkRoute routeParams={props.match.params} />} />
+      </Switch>
       <Footer/>
     </div>
   )

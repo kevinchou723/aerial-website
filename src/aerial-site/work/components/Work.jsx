@@ -1,16 +1,14 @@
 import React from 'react';
 import injectSheet from 'react-jss';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import windowDimensions from 'react-window-dimensions';
 import pure from 'recompose/pure';
 import compose from 'recompose/compose';
 import branch from 'recompose/branch';
 import lifecycle from 'recompose/lifecycle';
 import withProps from 'recompose/withProps';
-import { Link } from 'react-router-dom';
 import { Panel, Grid } from '../../common';
 import { pageNames, pageTitles } from '../constants';
-
-import windowDimensions from 'react-window-dimensions';
 
 const styleSheet = theme => ({
     topSection:{
