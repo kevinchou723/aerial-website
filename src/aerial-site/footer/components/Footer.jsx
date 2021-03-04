@@ -74,7 +74,7 @@ const Footer = ({
         <div className={classes.footerContainer}>
             <div className={classes.footerWrapper}>
                 <div className={classes.firstSection}>
-                    <div className={classes.footerLinks}> &copy; 2018 Aerial Chen </div>
+                <div className={classes.footerLinks}> &copy; {new Date().getFullYear()} Aerial Chen </div>
                 </div>
                 <p className={classes.by}>Site designed by <Link to="/about">Aerial Chen</Link></p>
                 <div className={classes.secondSection}>
